@@ -81,3 +81,44 @@ export function addConversation(conversation) {
 
 
 
+/*----------------
+ Message API
+----------------*/
+function getMessages() {
+    const endpoint = BASE_URL + '/message/readAll';
+    console.log("getMessages");
+    return fetch(endpoint).then(res => res.json());
+}
+
+// export function getConversation(id) {
+//     const endpoint = BASE_URL + `/conversation/readOne/${id}`;
+//     console.log("getConversation");
+//     return fetch(endpoint).then(res => {
+//         console.log(res);
+//     });
+// }
+
+export function useMessages() {
+    const [loading, setLoading] = useState(true);
+    const [messages, setMessages] = useState([]);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        getMessages()
+            .then(messages => {
+                setMessages(messages);
+                setLoading(false);
+            })
+            .catch(e => {
+                console.log(e);
+                setError(e);
+                setLoading(false);
+            });
+    }, []);
+
+    return {
+        loading,
+        messages,
+        error
+    };
+}

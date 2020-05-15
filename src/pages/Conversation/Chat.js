@@ -1,6 +1,7 @@
 import React from "react";
 import Messages from '../../components/chat/Messages';
 import "../../chatStyles.css";
+import { getMessages, useMessages} from "../../api.js";
 
 export default function Chat() {
     return (

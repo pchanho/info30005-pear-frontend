@@ -1,93 +1,66 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
-* {
-  box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
-  color: #777;
-  background-color: #ffebcd;
-  margin: 0;
-  /*padding: 10px;*/
+/*!*-------------*/
+/* 	Chat page*/
+/*-------------*!*/
+
+
+.chatPage {
+  border: solid 1px red;
+  display: grid;
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
 }
-.forms {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.account {
-  padding-top: 100px;
-  padding-bottom: 80px;
-}
-.chatLog {
-    padding-top: 100px;
-    padding-bottom: 80px;
-  }
-  .chatBox {
-    padding-top: 100px;
-    padding-bottom: 80px;
-  }
-.account h1 {
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
-  color: #905a2a;
-}
-.create {
   padding: 20px;
-  width: 47%;
-  float: left;
-  border-style: solid;
-  border-color: #905a2a;
-}
-.login {
-  padding: 20px;
-  width: 47%;
-  float: right;
-  border-style: solid;
-  border-color: #905a2a;
-}
-input,
-select, .account-btn {
-  width: 100%;
-  padding: 10px 10px;
-  margin: 5px 5px;
-  margin-bottom: 10px;
-  border: 1px solid #905a2a;
-  border-radius: 4px;
-}
-input[type="submit"], .account-btn {
-  width: 50%;
-  background-color: #d2b48c;
-  color: white;
-  float: right;
-}
-input[type="submit"]:hover, .account-btn:hover {
-  background-color: #905a2a;
-}
-input:focus, .account-btn:focus {
-  outline: none;
-  border-width: 3px;
-}
-.footer {
-  bottom: 0;
-  width: 100%;
+  font-size: 30px;
 }
 
+.user-display{
+  border: solid 1px red;
+  /*
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 10%;
+  height: 10%; */
+}
 
+.message-display{
+  border: solid 1px red;
+  /*
+  text-align: left;
+  border-radius: 30px; */
+  grid-area: 1 / 2 / 3 / 4;
+}
 
+.topic-display{
+  border: solid 1px red;
+  /*
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 10%;
+  height: 10%;
+  border-radius: 30px; */
+}
 
+.message-form{
+  border: solid 1px red;
+  /*
+  text-align: left;
+  border-radius: 30px; */
+  grid-area: 3 / 2 / 4 / 4;
+}
 
-/*.container {*/
-/*  display: grid;*/
-/*  width: 100%;*/
-/*  height: 100vh;*/
-/*  background: #d2b48c;*/
-/*  margin-top: 100px;*/
-/*  margin-bottom: 50px;*/
-
-/*  grid-template-columns: 300px auto;*/
-/*  grid-template-rows: 60px auto 60px;*/
-/*  grid-row-gap: 10px;*/
-/*}*/
+#message-heading {
+  padding-top: 50px;
+  padding-bottom: 0;
+  text-align: center;
+  margin: 0;
+}
 
 /*.scrollable {*/
 /*  position: relative;*/

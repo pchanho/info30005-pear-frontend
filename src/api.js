@@ -139,6 +139,53 @@ export function accountLogin(login) {
 /*----------------
  Message API
 ----------------*/
+export function addMessage(message) {
+    const {conversationId, senderId, text, image, video } = message;
+    if (!conversationId || !senderId || !text || !image || !video) {
+        alert("must include all fields");
+        return;
+    }
+
+
+    const endpoint = BASE_URL + `/message/create/`;
+    return fetch(endpoint, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            conversationId,
+            senderId,
+            text, 
+            image, 
+            video
+        })
+    }).then(res => window.location.reload());
+}
+
+function getSpecific(data) {        
+    
+
+    const {conversationId } = "5eae207c2630d000173c63d6";
+    if (!conversationId) {
+        alert("must include all fields");
+        return;
+    }
+    
+
+
+    const endpoint = BASE_URL + '/message/readSpecific';
+    return fetch(endpoint, {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            conversationId: "5eae207c2630d000173c63d6"
+        })
+    }).then(res => window.location.reload());
+}
+
 function getMessages() {
     const endpoint = BASE_URL + '/message/readAll';
     console.log("getMessages");

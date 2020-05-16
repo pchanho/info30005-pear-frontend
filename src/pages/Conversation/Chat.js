@@ -1,12 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import Messages from '../../components/chat/Messages';
 import "../../chatStyles.css";
-import { getMessages, useMessages} from "../../api.js";
+import { addMessage, getMessages, useMessages} from "../../api.js";
 
 
-export default function Chat() {
+export default function Chat(data) {
+  var { loading, messages, error } = useMessages("5eae207c2630d000173c63d6");
+    if (loading) {
+      return <p>Loading...</p>;
+    }
+    if (error) {
+      return <p>Something went wrong: {error.message}</p>;
+    }
 
-  return (
+    console.log(messages);
+  
+    return (
+
+      <div>
+          <h1 id='join-heading'>Conversation List</h1>
+              {messages.map(messages => (
+                  <Message key={messages.text} {...messages} />
+              ))}
+              
+      </div>
+
+  );
+  return (  
     <section className="forms">
       <div class="chatLog">
         <ChatBox />
@@ -18,35 +38,39 @@ export default function Chat() {
 
 
 function ChatBox() {
-  // const [firstName, setFirstName] = useState("");
-  // const [lastName, setLastName] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [birthday, setBirthday] = useState("");
-  // const [password, setPassword] = useState("");
-  // function onSubmit() {
-  //     addAccount({
-  //         firstName,
-  //         lastName,
-  //         email, 
-  //         birthday, 
-  //         password
-  //     });
-
-  //     window.location.reload();
-  // }
+   const [conversationId, setConversatioId] = useState("");
+   const [senderId, setSenderId] = useState("");
+   const [text, setText] = useState("");
+   const [image, setImage] = useState("");
+   const [video, setVideo] = useState("");
 
   function onSubmit() {
-  
+    addMessage({
+      conversationId,
+      senderId, 
+      text,
+      image,
+      video
+
+    });
 
     window.location.reload();
 }
 
   return (
     <div class="chatBox">
-      <h1>Create Account</h1>
+      <h1>Chatting with: </h1>
 
-      <form>
-        
+      <form>  
+        <label for="message">Write a message</label>
+          <input 
+            type="text" 
+            name="message" 
+            value={text}  
+            onChange={event => {
+              setText(event.target.value);
+            }}
+          /> <br />
       
         <input type="submit" value="Submit" className='account-btn' onClick={onSubmit}/>
       </form>
@@ -96,7 +120,7 @@ function ChatBox() {
                 <br></br>
                 {text}
                 <br></br>
-                {text}
+                {senderId}
              </div>
          </div>
       </section>

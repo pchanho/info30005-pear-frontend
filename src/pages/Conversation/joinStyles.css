@@ -90,13 +90,45 @@
 
 .conversation-create{
     padding: 150px 150px;
+    text-align: center;
+}
+
+.conversation-create h1{
+    padding-bottom: 20px;
 }
 
 .conversation-create-content{
-    width: 30%;
-    text-align: center;
-    align-items: center;
+    width: 100%;
+    border: 1px solid red;
+
 }
+
+.conversation-create-content input {
+    width: 30%;
+    padding: 10px 10px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    border: 1px solid #905a2a;
+    border-radius: 4px;
+}
+
+.conversation-create-content input[type="submit"] {
+    width: 50%;
+    background-color: #d2b48c;
+    color: white;
+    float: right;
+}
+
+.conversation-create-content input[type="submit"]:hover {
+    background-color: #905a2a;
+}
+
+.conversation-create-content input:focus {
+    outline: none;
+    border-width: 3px;
+}
+
+
 
 .btn-success{
 

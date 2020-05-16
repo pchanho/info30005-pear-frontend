@@ -3,11 +3,12 @@
 *  2. */
 
 import { useState, useEffect } from "react";
+import FormData from "form-data"
 
 // const BASE_URL = "https://info30005-pear.herokuapp.com";
 
 //Temporary base url before update heroku server
-const BASE_URL = "https://info30005-pear.herokuapp.com";
+const BASE_URL = "http://localhost:3001";
 
 function getConversations() {
     const endpoint = BASE_URL + '/conversation/readAll';
@@ -56,24 +57,21 @@ export function addConversation(conversation) {
         return;
     }
 
-    console.log({
-        topic,
-        category
-    });
+    if (image == undefined){
+        alert("image upload error, default image used in place")
+    }
+
+    const data = new FormData();
+    data.append('topicImage', image);
+    data.append('topic', topic);
+    data.append('category', category);
 
     const endpoint = BASE_URL + `/conversation/create/`;
     console.log("addConversation");
     // console.log(author);
     return fetch(endpoint, {
         method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            topic,
-            category,
-            image
-        })
+        body: data
     }).then(res => window.location.reload());
 }
 

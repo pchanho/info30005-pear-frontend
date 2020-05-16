@@ -20,20 +20,20 @@ export default function Chat(data) {
     return (
       
       <div className = "chat-page">
-        <div className = "user-display">Bob</div>
+        <div className = "grid-item user-display">Bob</div>
 
-        <div className = "topic-display">Dog</div>
-
-        <div className = "message-display">
-          <h1 id = "message-heading">Conversation</h1>
+        <div className = "grid-item message-display">
+          <h1 id = "grid-item message-heading">Conversation</h1>
             {messages.map(messages => (
                 <Message key={messages.text} {...messages} />
               ))}
         </div>
 
-        <div className = "message-form">
-          <MessageForm />
-        </div>  
+        <div className = "grid-item topic-display">Dog</div>
+
+        <div className = "grid-item message-form">
+          {<MessageForm />}
+        </div>
 
       </div>
 
@@ -64,12 +64,13 @@ function MessageForm() {
 
   return (
     <div className = "chatBox">
-      <h1>Chatting with: </h1>
+      <h1>Write message: </h1>
       <form onSubmit={handleSubmit}>  
         {/* <label for="message">Write a message</label> */}
           <input 
             type="text" 
-            name="message" 
+            name="message"
+            placeholder="Type your message"
             value={text}  
             onChange={event => {
               setText(event.target.value);
@@ -77,7 +78,7 @@ function MessageForm() {
             
           /> <br />
       
-        <input type="submit" value="Submit" className='account-btn' onClick={onSubmit}/>
+        <input type="submit" value="Send" id='btn' onClick={onSubmit}/>
       </form> 
     </div>
   );

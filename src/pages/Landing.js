@@ -11,7 +11,7 @@ export default function Landing() {
                 <img src={logo} className="landing_logo" alt="logo"/>
                 <h1>Welcome to Pear</h1>
                 <h3>Connect with Pear</h3>
-                <NavLink to="/join" className="btn">Join Conversation</NavLink>
+                <NavLink to="/account" className="btn">Join Now</NavLink>
             </section>
 
             <div className="bgImg" alt="bgImg"></div>

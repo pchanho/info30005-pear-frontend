@@ -8,15 +8,16 @@ export default function Nav() {
     <div className="Nav-bar">
       <h2 id="nav-logo-text">Pear</h2>
       <nav>
-        <NavLink exact to="/">
-          Home
-        </NavLink>
 
-        <NavLink to="/join">Conversation</NavLink>
+        <NavLink to="/join">Home</NavLink>
 
-        {/*<NavLink to="/chat">Chat</NavLink>*/}
+        <NavLink to="/support">Support</NavLink>
 
-        <NavLink to="/account">Sign In</NavLink>
+        <NavLink to="/report">Report</NavLink>
+
+        <NavLink exact to="/">Sign Out</NavLink>
+        {/* add in some kind of sign out */}
+
       </nav>
     </div>
   );

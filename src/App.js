@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Landing from "./pages/Landing";
 import Account from "./pages/Account";
+import Support from "./pages/Support";
+import Report from "./pages/Report";
 import Join from "./pages/Conversation/Join";
 import Create from "./pages/Conversation/Create";
 import Chat from "./pages/Conversation/Chat";
@@ -13,7 +15,6 @@ export default function App() {
   return (
     <Router>
       <div className="App">
-        <Nav />
         {/* the content */}
         {/* A <Switch> looks through its children <Route>s and
           renders the first one that matches the current URL. */}
@@ -27,16 +28,30 @@ export default function App() {
           </Route>
 
           <Route path="/join">
+            <Nav />
             <Join />
           </Route>
 
           <Route path="/chat">
+            <Nav />
             <Chat />
           </Route>
 
           <Route path="/create">
+            <Nav />
             <Create />
           </Route>
+
+          <Route path="/support">
+            <Nav />
+            <Support />
+          </Route>
+
+          <Route path="/report">
+            <Nav />
+            <Report />
+          </Route>
+
         </Switch>
 
         <Footer />

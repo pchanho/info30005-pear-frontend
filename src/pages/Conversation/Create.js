@@ -10,6 +10,7 @@ export default function Create() {
         <div>
             <ConversationAddForm />
         </div>
+
         //What do you want to talk about?
 
         //Pick a category:
@@ -22,13 +23,13 @@ export default function Create() {
 function ConversationAddForm() {
     const [topic, setTopic] = useState("");
     const [category, setCategory] = useState("");
-    const [participantsId, setParticipantsId] = useState("");
+    const [image, setImage] = useState("");
 
     function onSubmit() {
         addConversation({
             topic,
             category,
-            participantsId
+            image
         });
 
         window.location.reload();
@@ -56,14 +57,17 @@ function ConversationAddForm() {
                         setCategory(event.target.value);
                     }}
                 />
+
+                {/*friend added later*/}
+                <body>
+                Add a file
+                </body>
                 <input
-                    type="text"
-                    placeholder="friend"
-                    name="friend"
-                    value={participantsId}
-                    onChange={event => {
-                        setParticipantsId(event.target.value);
-                    }}
+                  type="file"
+                  value={image}
+                  onChange={event => {
+                        setImage(event.target.value);
+                  }}
                 />
                 <Button className={"btn-success"} onClick={onSubmit}>
                     Create
@@ -73,6 +77,9 @@ function ConversationAddForm() {
     );
 }
 
+function ConversationAddImage() {
+
+}
 
 
 

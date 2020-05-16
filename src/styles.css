@@ -20,6 +20,7 @@
 .landing .landing_logo {
   height: 20%;
   width: 20%;
+  min-width: 200px;
   margin: 0;
   padding: 0;
 }

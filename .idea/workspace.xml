@@ -1,19 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:heroku" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="5b1df608-f79b-41e5-a70f-3f7bdd2de550" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/accountStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/accountStyles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Account.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Account.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Conversation/Create.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Conversation/Create.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Conversation/Join.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Conversation/Join.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Conversation/joinStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Conversation/joinStyles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -22,7 +48,6 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -45,16 +70,38 @@
       <option name="presentableId" value="Default" />
       <updated>1589542652474</updated>
       <workItem from="1589542653785" duration="1489000" />
+      <workItem from="1589601541785" duration="6307000" />
+      <workItem from="1589609814383" duration="3665000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="40" y="33" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589607558739">
+      <screen x="0" y="23" width="1152" height="697" />
+    </state>
+    <state x="40" y="33" key="#com.intellij.execution.impl.EditConfigurationsDialog/1152.-337.1920.1057/0.23.1152.697@0.23.1152.697" timestamp="1589607558739" />
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589465356190">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1589465356190" />
+    <state x="1777" y="-102" width="670" height="676" key="search.everywhere.popup" timestamp="1589613076581">
+      <screen x="1152" y="-337" width="1920" height="1057" />
+    </state>
+    <state x="1777" y="-102" width="670" height="676" key="search.everywhere.popup/1152.-337.1920.1057/0.23.1152.697@1152.-337.1920.1057" timestamp="1589613076581" />
   </component>
 </project>

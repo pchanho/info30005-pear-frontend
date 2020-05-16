@@ -14,6 +14,7 @@
 
 .join-container{
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     padding: 40px 30px;
     align-items: center;
@@ -26,6 +27,7 @@
 .join{
     margin: 0;
     padding: 0;
+    margin: 10px 10px;
     border-radius: 30px;
 }
 
@@ -37,48 +39,17 @@
     height: 10%;
 }
 
-#help {
-    position: sticky;
-    padding: 0;
-    border-radius: 30px;
-    background: #333;
-    float: right;
-    width: 100px;
-    height: 60px;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 60px;
-    color: white;
-    font-weight: bold;
-    right: 30px;
-    bottom: 50px;
-}
-
-#report {
-    position: sticky;
-    padding: 0;
-    border-radius: 30px;
-    background: #333;
-    float: left;
-    width: 100px;
-    height: 60px;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 60px;
-    color: white;
-    font-weight: bold;
-    left: 30px;
-    bottom: 50px;
-}
-
 .conversation-item {
     /*background: white;*/
     text-align: center;
     align-content: center;
-    margin: 5px 5px;
+    margin: 0;
     transition: transform 300ms ease 100ms;
     border-radius: 30px;
-    padding: 150px 150px;
+    width: auto;
+    padding: 0;
+    width: 300px;
+    height: 300px;
     cursor: pointer;
     border: none;
     outline: none;
@@ -101,8 +72,10 @@
 
 .btn-join{
     text-align: center;
-    padding: 140px 140px;
-    margin: 0 2px;
+    padding-top: 112px;
+    width: 300px;
+    height: 300px;
+    margin: 10px 10px;
     background: white;
     color: #333;
     text-decoration: none;

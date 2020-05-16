@@ -50,9 +50,9 @@ export function useConversations() {
 
 
 export function addConversation(conversation) {
-    const { topic, category, participantsId } = conversation;
+    const { topic, category, image } = conversation;
     if (!topic || !category) {
-        alert("must include all fields");
+        alert("must include all required fields");
         return;
     }
 
@@ -72,7 +72,7 @@ export function addConversation(conversation) {
         body: JSON.stringify({
             topic,
             category,
-            participantsId
+            image
         })
     }).then(res => window.location.reload());
 }
@@ -91,7 +91,7 @@ export function addAccount(account) {
 
     const endpoint = BASE_URL + `/account/create/`;
     console.log("addAccount");
-    // console.log(author);
+    
     return fetch(endpoint, {
         method: "POST",
         headers: {
@@ -127,10 +127,6 @@ export function accountLogin(login) {
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({
-            email, 
-            password
-        })
     }).then(res => window.location.reload());
 }
 

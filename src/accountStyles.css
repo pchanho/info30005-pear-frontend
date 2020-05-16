@@ -59,7 +59,17 @@ input:focus, .account-btn:focus {
   outline: none;
   border-width: 3px;
 }
-.footer {
-  bottom: 0;
-  width: 100%;
+
+.admin-btn {
+  position: sticky;
+  margin: 30px;
+  padding: 0 10px;
+  border-radius: 30px;
+  background: #333;
+  float: right;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 60px;
+  color: white;
+  font-weight: bold;
 }

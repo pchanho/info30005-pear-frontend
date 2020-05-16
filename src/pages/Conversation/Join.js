@@ -6,6 +6,7 @@ import "./joinStyles.css";
 
 export default function Join() {
     const { loading, conversations, error } = useConversations();
+    console.log(conversations)
     if (loading) {
         return <p>Loading...</p>;
     }

@@ -3,7 +3,7 @@ import ToolBar from "./ToolBar";
 import "../../chatStyles.css";
 
 export default function Messages() {
-  return (
+  return ( 
     <div className="message-list">
         <ToolBar title="Conversation Title" />
 

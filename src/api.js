@@ -137,7 +137,7 @@ export function accountLogin(login) {
 ----------------*/
 export function addMessage(message) {
     const {conversationId, senderId, text, image, video } = message;
-    if (!conversationId || !senderId || !text || !image || !video) {
+    if (!conversationId || !senderId || !text) {
         alert("must include all fields");
         return;
     }

@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import Messages from '../../components/chat/Messages';
 import "../../chatStyles.css";
+import { NavLink } from "react-router-dom";
 import { addMessage, getMessages, useMessages} from "../../api.js";
 
 
 export default function Chat(data) {
-  data = {conversationId: "5eae207c2630d000173c63d4"}
+  data = {conversationId: "5eae207c2630d000173c63d6"}
   var { loading, messages, error } = useMessages(data);
     if (loading) {
       return <p>Loading...</p>;
@@ -17,28 +18,30 @@ export default function Chat(data) {
     console.log(messages);
   
     return (
+      
+      <div className = "chat-page">
+        <div className = "user-display">Bob</div>
 
-      <div>
-          <h1 id='join-heading'>Conversation List</h1>
-              {messages.map(messages => (
-                  <Message key={messages.text} {...messages} />
+        <div className = "topic-display">Dog</div>
+
+        <div className = "message-display">
+          <h1 id = "message-heading">Conversation</h1>
+            {messages.map(messages => (
+                <Message key={messages.text} {...messages} />
               ))}
-              
+        </div>
+
+        <div className = "message-form">
+          <MessageForm />
+        </div>  
+
       </div>
 
   );
-  return (  
-    <section className="forms">
-      <div class="chatLog">
-        <ChatBox />
-   
-      </div>
-    </section>
-  );    
 }
 
 
-function ChatBox() {
+function MessageForm() {
    const [conversationId, setConversatioId] = useState("");
    const [senderId, setSenderId] = useState("");
    const [text, setText] = useState("");
@@ -54,16 +57,16 @@ function ChatBox() {
       video
 
     });
-
-    window.location.reload();
 }
+  function handleSubmit(event){
+    event.preventDefault();
+  }
 
   return (
-    <div class="chatBox">
+    <div className = "chatBox">
       <h1>Chatting with: </h1>
-
-      <form>  
-        <label for="message">Write a message</label>
+      <form onSubmit={handleSubmit}>  
+        {/* <label for="message">Write a message</label> */}
           <input 
             type="text" 
             name="message" 
@@ -71,40 +74,14 @@ function ChatBox() {
             onChange={event => {
               setText(event.target.value);
             }}
+            
           /> <br />
       
         <input type="submit" value="Submit" className='account-btn' onClick={onSubmit}/>
-      </form>
+      </form> 
     </div>
   );
 }
-
-
-
-  // function readMessages(){
-  //   var { loading, messages, error } = useMessages();
-  //   if (loading) {
-  //     return <p>Loading...</p>;
-  //   }
-  //   if (error) {
-  //     return <p>Something went wrong: {error.message}</p>;
-  //   }
-
-  //   console.log(messages);
-  
-  //   messages = [{ id: "wewew" }];
-  //   return (
-
-  //     <div>
-  //         <h1 id='join-heading'>Conversation List</h1>
-  //             {messages.map(messages => (
-  //                 <Message key={messages.text} {...messages} />
-  //             ))}
-              
-  //     </div>
-
-  // );
-  // }
   
   function Message(message) {
     const {_id, conversationId, senderId, text, image, video, timeSent} = message;
@@ -126,8 +103,4 @@ function ChatBox() {
          </div>
       </section>
   );
-  }
-  
-
-
-
+ }

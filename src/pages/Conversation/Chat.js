@@ -23,19 +23,18 @@ export default function Chat(data) {
         <div className = "grid-item user-display">Bob</div>
 
         <div className = "grid-item message-display">
-          {/* <h1 id = "grid-item message-heading">Conversation</h1>
+          <h1 id = "grid-item message-heading">Conversation</h1>
             {messages.map(messages => (
                 <Message key={messages.text} {...messages} />
-              ))} */}
+              ))}}
               message list
         </div>
 
         <div className = "grid-item topic-display">Dog</div>
 
         <div className = "grid-item message-form">
-          {/* <MessageForm /> */}
-          form
-        </div>  
+          {<MessageForm />}
+        </div>
 
       </div>
 
@@ -71,7 +70,8 @@ function MessageForm() {
         {/* <label for="message">Write a message</label> */}
           <input 
             type="text" 
-            name="message" 
+            name="message"
+            placeholder="Type your message"
             value={text}  
             onChange={event => {
               setText(event.target.value);
@@ -79,7 +79,7 @@ function MessageForm() {
             
           /> <br />
       
-        <input type="submit" value="Submit" className='account-btn' onClick={onSubmit}/>
+        <input type="submit" value="Send" id='btn' onClick={onSubmit}/>
       </form> 
     </div>
   );

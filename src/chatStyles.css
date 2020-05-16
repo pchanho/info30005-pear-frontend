@@ -3,12 +3,12 @@
 /*-------------*!*/
 
 
-.chatPage {
+.chat-page {
   border: solid 1px red;
   display: grid;
   grid-gap: 10px;
   background-color: #2196F3;
-  padding: 10px;
+  padding: 200px;
 }
 
 .grid-item {
@@ -19,7 +19,6 @@
 }
 
 .user-display{
-  border: solid 1px red;
   /*
   background-repeat: no-repeat;
   background-position: center;
@@ -29,7 +28,6 @@
 }
 
 .message-display{
-  border: solid 1px red;
   /*
   text-align: left;
   border-radius: 30px; */
@@ -37,7 +35,6 @@
 }
 
 .topic-display{
-  border: solid 1px red;
   /*
   background-repeat: no-repeat;
   background-position: center;
@@ -48,7 +45,6 @@
 }
 
 .message-form{
-  border: solid 1px red;
   /*
   text-align: left;
   border-radius: 30px; */
@@ -62,6 +58,35 @@
   margin: 0;
 }
 
+.chatBox input {
+  width: 50%;
+  height: 30px;
+}
+
+.chatBox h1 {
+  font-size: 20px;
+}
+
+#btn{
+  width: 150px;
+  height: 35px;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 20px;
+  background-color: #d2b48c;
+  color: #fff;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+#btn:hover {
+  background-color: #789d4a;
+  transform: scale(1.1);
+  color: #fff;
+}
 /*.scrollable {*/
 /*  position: relative;*/
 /*  overflow-y: scroll;*/
@@ -101,11 +126,11 @@
 .toolbar {
     display: flex;
     align-items: center;
-  
+
     background-color: white;
     font-weight: 500;
     border-bottom: 1px solid #eeeef1;
-  
+
     position: sticky;
     top: 0px;
   }

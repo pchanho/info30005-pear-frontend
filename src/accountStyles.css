@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
 * {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
@@ -7,14 +8,15 @@
   margin: 0;
   /*padding: 10px;*/
 }
-.forms {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
+/*.forms {*/
+/*  padding: 0;*/
+/*  margin: 0;*/
+/*  box-sizing: border-box;*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  align-items: center;*/
+/*}*/
 .account {
   padding-top: 100px;
   padding-bottom: 80px;

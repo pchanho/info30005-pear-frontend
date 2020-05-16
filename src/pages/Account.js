@@ -15,7 +15,7 @@ export default function Account() {
           <AccountAddForm />
 
           <Login />
-          <NavLink to="/join" className="admin-btn">Admin Login</NavLink>
+          <NavLink to="/home" className="admin-btn">Admin Login</NavLink>
         </div>
       </section>
     </div>

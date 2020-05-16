@@ -24,13 +24,13 @@ export default function Create() {
 function ConversationAddForm() {
     const [topic, setTopic] = useState("");
     const [category, setCategory] = useState("");
-    const [image, setImage] = useState("");
+    const [topicImage, setImage] = useState("");
 
     function onSubmit() {
         addConversation({
             topic,
             category,
-            image
+            topicImage
         });
         // window.location.reload();
     }
@@ -38,8 +38,6 @@ function ConversationAddForm() {
     function handleSubmit(event) {
         event.preventDefault();
     }
-
-    const {conversations} = useConversations();
 
     return (
         <div className="conversation-create">
@@ -72,14 +70,17 @@ function ConversationAddForm() {
                 <p>Add your image</p>
                 <input
                   type="file"
-                  value={image}
+                  value={topicImage}
                   onChange={event => {
                         setImage(event.target.value);
                   }}
                 />
-                <Button className={"btn-success"} onClick={onSubmit}>
-                    Create
-                </Button>
+                <div className="btn-create-container">
+                    <Button className={"btn-create"} onClick={onSubmit}>
+                        Create
+                    </Button>
+                </div>
+
             </form>
         </div>
     );

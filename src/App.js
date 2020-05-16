@@ -4,7 +4,7 @@ import Landing from "./pages/Landing";
 import Account from "./pages/Account";
 import Support from "./pages/Support";
 import Report from "./pages/Report";
-import Join from "./pages/Conversation/Join";
+import Home from "./pages/Conversation/Home";
 import Create from "./pages/Conversation/Create";
 import Chat from "./pages/Conversation/Chat";
 import Nav from "./components/Nav";
@@ -27,9 +27,9 @@ export default function App() {
             <Account />
           </Route>
 
-          <Route path="/join">
+          <Route path="/home">
             <Nav />
-            <Join />
+            <Home />
           </Route>
 
           <Route path="/chat">

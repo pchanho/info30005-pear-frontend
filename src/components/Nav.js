@@ -9,7 +9,7 @@ export default function Nav() {
       <h2 id="nav-logo-text">Pear</h2>
       <nav>
 
-        <NavLink to="/join">Home</NavLink>
+        <NavLink to="/home">Home</NavLink>
 
         <NavLink to="/support">Support</NavLink>
 

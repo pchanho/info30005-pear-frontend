@@ -162,24 +162,25 @@ export function addMessage(message) {
 function getSpecific(data) {        
     
 
-    const {conversationId } = "5eae207c2630d000173c63d6";
+    const conversationId  = data.conversationId;
     if (!conversationId) {
         alert("must include all fields");
         return;
     }
+    alert(conversationId)
     
-
+    
 
     const endpoint = BASE_URL + '/message/readSpecific';
     return fetch(endpoint, {
-        method: "GET",
+        method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            conversationId: "5eae207c2630d000173c63d6"
+            conversationId
         })
-    }).then(res => window.location.reload());
+    }).then(res => res.json());
 }
 
 function getMessages() {
@@ -196,13 +197,13 @@ function getMessages() {
 //     });
 // }
 
-export function useMessages() {
+export function useMessages(data) {
     const [loading, setLoading] = useState(true);
     const [messages, setMessages] = useState([]);
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        getMessages()
+        getSpecific(data)
             .then(messages => {
                 setMessages(messages);
                 setLoading(false);

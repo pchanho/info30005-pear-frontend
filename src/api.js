@@ -167,9 +167,6 @@ function getSpecific(data) {
         alert("must include all fields");
         return;
     }
-    alert(conversationId)
-    
-    
 
     const endpoint = BASE_URL + '/message/readSpecific';
     return fetch(endpoint, {

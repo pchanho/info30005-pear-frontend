@@ -31,12 +31,7 @@ export default function Home() {
 function Conversation(conversation) {
     const {_id, status, topic, category, topicImage} = conversation;
     return (
-      <NavLink
-        to="/chat"
-        className={`conversation-item conversation-${topic}`}
-        key={topic}
-        style={{backgroundImage: `url(${topicImage})`}}
-      >
+      <NavLink to="/chat" className={`conversation-item conversation-${topic}`}  key={topic} style={{backgroundImage: `url(${topicImage})`}}>
         🏷 {category}<br></br>🗣 {topic}
       </NavLink>
     );

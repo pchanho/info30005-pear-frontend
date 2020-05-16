@@ -24,13 +24,6 @@
     align-content: center;
 }
 
-.join{
-    margin: 0;
-    padding: 0;
-    margin: 10px 10px;
-    border-radius: 30px;
-}
-
 .topic-image{
     background-repeat: no-repeat;
     background-position: center;
@@ -42,25 +35,32 @@
 .conversation-item {
     /*background: white;*/
     text-align: center;
-    align-content: center;
     margin: 10px 10px;
     transition: transform 300ms ease 100ms;
     border-radius: 30px;
-    width: auto;
-    padding: 0;
-    width: 300px;
-    height: 300px;
+    min-width: 300px;
+    max-width: 300px;
+    min-height: 300px;
+    max-height: 300px;
+    padding-top: 124px;
+    padding-left: 10px;
+    padding-right: 10px;
     cursor: pointer;
-    border: none;
-    outline: none;
     flex: 1 0 21%;
-    font-size: 25px;
     background-color: white;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: white;
+    text-decoration: none;
+    font-size: 25px;
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+.conversation-item-text {
+    display: inline-block;
+
+
 }
 
 .conversation-item:hover {

@@ -58,7 +58,7 @@ export function addConversation(conversation) {
     }
 
     if (image == undefined){
-        alert("image upload error, default image used in place")
+        alert("no image detected, default image used in place")
     }
 
     const data = new FormData();

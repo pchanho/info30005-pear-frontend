@@ -20,7 +20,6 @@ function AccountAddForm() {
   const [email, setEmail] = useState("");
   const [birthday, setBirthday] = useState("");
   const [password, setPassword] = useState("");
-  
   function onSubmit() {
       addAccount({
           firstName,

@@ -4,27 +4,27 @@
 
 
 .chat-page {
-  border: solid 1px red;
   display: grid;
   grid-gap: 10px;
-  background-color: #2196F3;
+  background-color: #789d4a;
   padding: 200px;
 }
 
 .grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
+  background-color: #ffebcd;
+  text-align: left;
   padding: 20px;
-  font-size: 30px;
+  font-size: 18px;
 }
 
 .user-display{
-  /*
+/*   
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   width: 10%;
   height: 10%; */
+  border-radius: 10px;
 }
 
 .message-display{
@@ -32,6 +32,7 @@
   text-align: left;
   border-radius: 30px; */
   grid-area: 1 / 2 / 3 / 4;
+  border-radius: 10px;
 }
 
 .topic-display{
@@ -42,12 +43,14 @@
   width: 10%;
   height: 10%;
   border-radius: 30px; */
+  border-radius: 10px;
 }
 
 .message-form{
   /*
   text-align: left;
   border-radius: 30px; */
+  border-radius: 10px;
   grid-area: 3 / 2 / 4 / 4;
 }
 
@@ -75,7 +78,7 @@
   text-decoration: none;
   font-weight: bold;
   font-size: 15px;
-  border-radius: 20px;
+  border-radius: 10px; 
   background-color: #d2b48c;
   color: #fff;
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);

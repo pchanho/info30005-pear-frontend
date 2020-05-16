@@ -26,8 +26,7 @@ export default function Chat(data) {
           <h1 id = "grid-item message-heading">Conversation</h1>
             {messages.map(messages => (
                 <Message key={messages.text} {...messages} />
-              ))}}
-              message list
+              ))}
         </div>
 
         <div className = "grid-item topic-display">Dog</div>

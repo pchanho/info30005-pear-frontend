@@ -1,41 +1,132 @@
-import React from "react";
+import React, { useState } from "react";
+import { addAccount, accountLogin} from "../api";
 import "../accountStyles.css";
 
 export default function Account() {
   return (
     <section className="forms">
       <div class="account">
-        <div class="create">
-          <h1>Create Account</h1>
+        <AccountAddForm />
 
-          <form>
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="fname" /> <br />
-            <label for="sname">Last Name</label>
-            <input type="text" id="sname" name="sname" /> <br />
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" /> <br />
-            <label for="datemin">Date of Birth</label>
-            <input type="date" id="birthday" min="1960-01-02" /> <br />
-            <label for="pword">Password</label>
-            <input type="password" id="pword" name="pword" /> <br />
-            <label for="cpword">Confirm Password</label>
-            <input type="password" id="cpword" name="cpword" /> <br />
-            <input type="submit" value="Submit" />
-          </form>
-        </div>
-
-        <div class="login">
-          <h1>Login</h1>
-          <form>
-            <label for="lemail">Email</label>
-            <input type="email" id="lemail" name="lemail" /> <br />
-            <label for="lpword">Password</label>
-            <input type="password" id="lpword" name="lpword" /> <br />
-            <input type="submit" value="Submit" />
-          </form>
-        </div>
+        <Login />        
       </div>
     </section>
+  );
+}
+
+function AccountAddForm() {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [birthday, setBirthday] = useState("");
+  const [password, setPassword] = useState("");
+  
+  function onSubmit() {
+      addAccount({
+          firstName,
+          lastName,
+          email, 
+          birthday, 
+          password
+      });
+
+      window.location.reload();
+  }
+
+  return (
+    <div class="create">
+      <h1>Create Account</h1>
+
+      <form>
+        <label for="firstName">First Name</label>
+          <input 
+            type="text" 
+            name="firstName" 
+            value={firstName}  
+            onChange={event => {
+              setFirstName(event.target.value);
+            }}
+          /> <br />
+        <label for="lastName">Last Name</label>
+          <input 
+            type="text" 
+            name="lastName" 
+            value={lastName}  
+            onChange={event => {
+              setLastName(event.target.value);
+            }}
+          /> <br />
+        <label for="email">Email</label>
+          <input 
+            type="email" 
+            name="email" 
+            value={email}
+            onChange={event => {
+              setEmail(event.target.value);
+            }}
+          /> <br />
+        <label for="birthday">Date of Birth</label>
+          <input 
+            type="date" 
+            name="birthday"
+            max="1955-01-01" 
+            value={birthday}
+            onChange={event => {
+              setBirthday(event.target.value);
+            }}
+          /> <br />
+        <label for="password">Password</label>
+          <input 
+            type="password" 
+            name="password" 
+            value={password}
+            onChange={event => {
+              setPassword(event.target.value);
+            }}
+          /> <br />
+        <input type="submit" value="Submit" className='account-btn' onClick={onSubmit}/>
+      </form>
+    </div>
+  );
+}
+
+function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  
+  function onLogin() {
+      accountLogin({
+          email, 
+          password
+      });
+
+      window.location.reload();
+  }
+
+  return (
+    <div class="login">
+          <h1>Login</h1>
+          <form>
+            <label for="email">Email</label>
+              <input 
+                type="email" 
+                name="email"
+                value={email}
+                onChange={event => {
+                  setEmail(event.target.value);
+                }} 
+              /> <br />
+            <label for="password">Password</label>
+              <input 
+                type="password" 
+                name="password" 
+                value={password}
+                onChange={event => {
+                  setPassword(event.target.value);
+                }}
+              /> <br />
+            <button type="submit" onClick={onLogin} className='account-btn'>Login</button>
+          </form>
+        </div>
   );
 }

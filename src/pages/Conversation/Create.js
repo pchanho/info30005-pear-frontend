@@ -8,11 +8,7 @@ export default function Create() {
 
     return (
         <div>
-            <section >
-                <div>
-                    <ConversationAddForm />
-                </div>
-            </section>
+            <ConversationAddForm />
         </div>
         //What do you want to talk about?
 

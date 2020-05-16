@@ -1,58 +1,20 @@
 /*!*-------------*/
-/* 	General*/
+/* 	Landing page*/
 /*-------------*!*/
 
-/*.landing-page {*/
-/*  */
+/**{*/
+/*  box-sizing: border-box;*/
+/*  margin: 0;*/
+/*  padding: 0;*/
 /*}*/
 
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-section {
+.landing, .about-pear {
   margin: 0;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 170px 100px;
-}
-
-section h3.title {
-  color: #414a4f;
-  font: bold 32px "Open Sans", sans-serif;
-  margin-bottom: 35px;
-  text-align: center;
-}
-
-section p {
-  max-width: 800px;
-  text-align: center;
-  margin-bottom: 35px;
-  padding: 0 20px;
-  line-height: 2;
-}
-
-/*!*-------------*/
-/* Landing Page*/
-/*-------------*!*/
-
-/*!*.landing{*!*/
-/*!*    *!*/
-/*!*    *!*/
-/*!*    position: relative;*!*/
-/*!*    margin-top: 150px;*!*/
-/*!*    justify-content: center;*!*/
-/*!*    min-height: 100vh;*!*/
-/*!*    color: #000;*!*/
-/*!*    text-align: center;*!*/
-/*!*}*!*/
-
-* {
-  margin: 0;
 }
 
 .landing .landing_logo {
@@ -74,6 +36,36 @@ section p {
   color: #414a4f;
 }
 
+.title {
+  color: #414a4f;
+  font: bold 32px "Open Sans", sans-serif;
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.bgImg {
+  background-image: url("./img/Img3.jpeg");
+  position: relative;
+  background-attachment: fixed;
+  margin: auto;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 500px;
+}
+
+#about {
+  max-width: 800px;
+  text-align: center;
+  margin-bottom: 35px;
+  padding: 0 20px;
+  line-height: 2;
+}
+
+/*!*-------------*/
+/* 	Button */
+/*-------------*!*/
+
 .btn {
   text-decoration: none;
   font-weight: bold;
@@ -92,34 +84,7 @@ section p {
   color: #fff;
 }
 
-/*.landing a.btn {*/
-/*  text-decoration: none;*/
-/*  font-weight: bold;*/
-/*  font-size: 20px;*/
-/*  padding: 15px 30px;*/
-/*  border-radius: 20px;*/
-/*  background-color: #d2b48c;*/
-/*  color: #fff;*/
-/*  box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2);*/
-/*  transition: transform 0.3s ease-in-out;*/
-/*}*/
 
-/*.landing a.btn:hover {*/
-/*  background-color: #789d4a;*/
-/*  transform: scale(1.1);*/
-/*  color: #fff;*/
-/*}*/
-
-.bgImg {
-  background-image: url("./img/Img3.jpeg");
-  position: relative;
-  background-attachment: fixed;
-  margin: auto;
-  overflow: hidden;
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 500px;
-}
 
 /*!*-------------*/
 /* Nav*/
@@ -135,7 +100,7 @@ section p {
   justify-content: space-between;
   align-items: center;
   color: #333;
-  padding: 35px 100px;
+  padding: 20px 100px;
 }
 
 nav{

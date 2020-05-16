@@ -10,7 +10,7 @@ export default function Join() {
     if (loading) {
         return <p>Loading...</p>;
     }
-    if (error) {
+    if (error) { 
         return <p>Something went wrong: {error.message}</p>;
     }
 

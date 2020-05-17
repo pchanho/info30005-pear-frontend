@@ -129,7 +129,7 @@ export async function accountLogin(login) {
     const { email, password } = login;
     if (!email || !password) {
         alert("must include all fields");
-        return;
+        return null;
     }
 
     console.log({

@@ -15,7 +15,6 @@ export default function Account() {
           <AccountAddForm />
 
           <Login />
-          <NavLink to="/home" className="admin-btn">Admin Login</NavLink>
         </div>
       </section>
     </div>
@@ -43,12 +42,15 @@ function AccountAddForm() {
       password
     });
     console.log(res)
-    if (res.data == "True"){
-      history.push("/home");
+    if(res != null ){
+      if (res.data == "True"){
+        history.push("/home");
+      }
+      else{
+        alert("failed to create account")
+      }
     }
-    else{
-      alert("failed to create account")
-    }
+    
     
   }
 
@@ -135,13 +137,14 @@ function Login() {
     //if email and password found function returns true 
     var res
     res = (await accountLogin({email, password}))
-    res = res.data
     console.log(res)
-    if ( res== "True") {
-      history.push("/home");
-    }
-    else{
-      alert("Invalid Login")
+    if (res != null){
+      if ( res.data== "True") {
+        history.push("/home");
+      }
+      else{
+        alert("Invalid Login")
+      }
     }
   }
 

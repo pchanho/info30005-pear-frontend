@@ -103,6 +103,7 @@
   color: #fff;
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out;
+  border: none;
 }
 
 #btn:hover {

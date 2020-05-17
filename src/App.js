@@ -35,24 +35,17 @@ export default function App() {
           <Route path="/home">
             <Nav />
             <Home />
-            {/* edit the conversation variable*/}
 
           </Route>
 
           <Route path="/chat">
             <Nav />
             <Chat />
-            {/* access the account variable */}
-            {/* access the conversation variable*/}
-
-            {/* edit the conversation variable*/}
-
           </Route>
 
           <Route path="/create">
             <Nav />
             <Create />
-            {/* edit the conversation variable*/}
           </Route>
 
           <Route path="/support">

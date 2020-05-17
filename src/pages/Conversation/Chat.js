@@ -86,7 +86,7 @@ function MessageForm() {
   
   function Message(message) {
     const {_id, conversationId, senderId, text, image, video, timeSent} = message;
-  
+    
     return (
       <section className='join'>
           <div className={`chat-room conversation-${text}`}  key={text}>

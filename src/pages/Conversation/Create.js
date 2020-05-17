@@ -82,6 +82,9 @@ function ConversationAddForm() {
                 />
                 <div className="btn-create-container">
                     <Button className={"btn-create"} onClick={onSubmit}>
+                        {/* !!! Only if successful */}
+                        {/* on click redirect to chat page*/}
+                        {/* on click set currentConversation within sessionStorage */}
                         Create
                     </Button>
                 </div>

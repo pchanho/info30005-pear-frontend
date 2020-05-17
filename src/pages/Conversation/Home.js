@@ -2,6 +2,7 @@ import React from 'react';
 import { useConversations} from "../../api";
 import { NavLink } from "react-router-dom";
 import "./homeStyles.css";
+import Button from "../../components/Button";
 // import Button from '../../components/Button';
 
 
@@ -33,6 +34,7 @@ function Conversation(conversation) {
     return (
       <NavLink to="/chat" className={`conversation-item conversation-${topic}`}  key={topic} style={{backgroundImage: `url(${topicImage})`}}>
         🏷 {category}<br></br>🗣 {topic}
+          {/* on click set currentConversation within sessionStorage */}
       </NavLink>
     );
 }

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { addAccount, accountLogin} from "../api";
-import "../accountStyles.css";
+import "../css/accountStyles.css";
 import Landing from "./Landing";
 import {NavLink, useHistory} from "react-router-dom";
 

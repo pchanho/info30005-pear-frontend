@@ -2,7 +2,6 @@
 /* 	Chat page*/
 /*-------------*!*/
 
-
 .chat-page {
   display: grid;
   grid-gap: 10px;
@@ -17,24 +16,17 @@
 }
 
 .user-display{
-/*
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 10%;
-  height: 10%; */
   border-radius: 10px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   width: 300px;
   height: 300px;
+  color: white;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
 .message-display{
-  /*
-  text-align: left;
-  border-radius: 30px; */
   grid-area: 1 / 2 / 3 / 4;
   max-height: 480px;
   border-style: solid;
@@ -45,13 +37,6 @@
 }
 
 .topic-display{
-  /*
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 10%;
-  height: 10%;
-  border-radius: 30px; */
   grid-area: 2 / 1 / 4 / 2;
   border-radius: 10px;
   background-repeat: no-repeat;
@@ -59,12 +44,11 @@
   background-size: cover;
   width: 300px;
   height: 300px;
+  color: white;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
 .message-form{
-  /*
-  text-align: left;
-  border-radius: 30px; */
   border-style: solid;
   border-color: #905a2a;
   border-radius: 10px;
@@ -111,51 +95,3 @@
   transform: scale(1.1);
   color: #fff;
 }
-/*.scrollable {*/
-/*  position: relative;*/
-/*  overflow-y: scroll;*/
-/*  -webkit-overflow-scrolling: touch;*/
-/*}*/
-
-/*.chatList {*/
-/*  background: grey;*/
-/*  grid-row-start: 1;*/
-/*  grid-row-end: span 3;*/
-/*  padding: 0;*/
-/*}*/
-
-/*.chatBox {*/
-/*  background: lightgrey;*/
-/*  grid-row-start: 1;*/
-/*  grid-row-end: span 3;*/
-/*}*/
-
-/*.toolbar {*/
-/*  display: inline;*/
-/*  position: sticky;*/
-/*  font-size: 10px;*/
-/*  top: 0;*/
-/*  margin: 0;*/
-/*  padding: 0;*/
-/*}*/
-/*.toolbar-title {*/
-/*  text-align: center;*/
-/*}*/
-
-/*!*.footer {*!*/
-/*!*  bottom: 0;*!*/
-/*!*  width: 100%;*!*/
-/*!*}*!*/
-/*
-.toolbar {
-    display: flex;
-    align-items: center;
-
-    background-color: white;
-    font-weight: 500;
-    border-bottom: 1px solid #eeeef1;
-
-    position: sticky;
-    top: 0px;
-  }
-  */

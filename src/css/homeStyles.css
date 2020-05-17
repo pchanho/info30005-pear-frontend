@@ -42,7 +42,6 @@
     max-width: 300px;
     min-height: 300px;
     max-height: 300px;
-    padding-top: 124px;
     padding-left: 10px;
     padding-right: 10px;
     cursor: pointer;
@@ -92,75 +91,4 @@ button:focus {
 
 .btn-join:hover {
     transform: scale(1.1) !important;
-}
-
-/*!*-------------*/
-/* 	CREATE */
-/*-------------*!*/
-
-
-
-
-.conversation-create{
-    padding: 150px 150px;
-    text-align: center;
-}
-
-.conversation-create h1{
-    padding-bottom: 20px;
-}
-
-.conversation-create-content{
-    width: 100%;
-
-}
-
-.conversation-create-content input {
-    width: 30%;
-    padding: 10px 10px;
-    margin-top: 5px;
-    margin-bottom: 30px;
-    border: 1px solid #905a2a;
-    border-radius: 4px;
-}
-
-.conversation-create-content input[type="submit"] {
-    width: 50%;
-    background-color: #d2b48c;
-    color: white;
-    float: right;
-}
-
-.conversation-create-content input[type="submit"]:hover {
-    background-color: #905a2a;
-}
-
-.conversation-create-content input:focus {
-    outline: none;
-    border-width: 3px;
-}
-
-.btn-create-container {
-    text-align: center;
-}
-
-.btn-create{
-    /*display: inline-block;*/
-    /*max-width: 400px;*/
-    border: none;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 20px;
-    padding: 15px 30px;
-    border-radius: 20px;
-    background-color: #d2b48c;
-    color: #fff;
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
-}
-
-.btn-create:hover {
-    background-color: #789d4a;
-    transform: scale(1.1);
-    color: #fff;
 }

@@ -25,12 +25,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b1df608-f79b-41e5-a70f-3f7bdd2de550" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/css/createStyles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/accountStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/accountStyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/accountStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/accountStyles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chatStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/chatStyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/chat/Messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/chat/Messages.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Account.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Account.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Conversation/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Conversation/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Conversation/homeStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Conversation/homeStyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Conversation/Chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Chat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Conversation/Create.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Create.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Conversation/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Conversation/homeStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/homeStyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Landing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Landing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Report.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Report.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Support.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Support.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +52,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -59,9 +71,27 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/css" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/pages" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Home.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/pages/Home.js" working-dir="$PROJECT_DIR$/src/pages/Conversation">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.Home.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -78,6 +108,7 @@
       <workItem from="1589609814383" duration="3665000" />
       <workItem from="1589626488729" duration="9839000" />
       <workItem from="1589686859537" duration="3238000" />
+      <workItem from="1589694445816" duration="1480000" />
     </task>
     <servers />
   </component>
@@ -105,6 +136,22 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1589465356190" />
+    <state width="1899" height="290" key="GridCell.Tab.0.bottom" timestamp="1589695976163">
+      <screen x="1152" y="-337" width="1920" height="1057" />
+    </state>
+    <state width="1899" height="290" key="GridCell.Tab.0.bottom/1152.-337.1920.1057/0.23.1152.697@1152.-337.1920.1057" timestamp="1589695976163" />
+    <state width="1899" height="290" key="GridCell.Tab.0.center" timestamp="1589695976162">
+      <screen x="1152" y="-337" width="1920" height="1057" />
+    </state>
+    <state width="1899" height="290" key="GridCell.Tab.0.center/1152.-337.1920.1057/0.23.1152.697@1152.-337.1920.1057" timestamp="1589695976162" />
+    <state width="1899" height="290" key="GridCell.Tab.0.left" timestamp="1589695976162">
+      <screen x="1152" y="-337" width="1920" height="1057" />
+    </state>
+    <state width="1899" height="290" key="GridCell.Tab.0.left/1152.-337.1920.1057/0.23.1152.697@1152.-337.1920.1057" timestamp="1589695976161" />
+    <state width="1899" height="290" key="GridCell.Tab.0.right" timestamp="1589695976163">
+      <screen x="1152" y="-337" width="1920" height="1057" />
+    </state>
+    <state width="1899" height="290" key="GridCell.Tab.0.right/1152.-337.1920.1057/0.23.1152.697@1152.-337.1920.1057" timestamp="1589695976163" />
     <state x="1777" y="-102" width="670" height="676" key="search.everywhere.popup" timestamp="1589613076581">
       <screen x="1152" y="-337" width="1920" height="1057" />
     </state>

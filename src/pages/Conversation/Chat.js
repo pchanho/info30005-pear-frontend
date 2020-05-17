@@ -18,25 +18,31 @@ export default function Chat(data) {
     console.log(messages);
   
     return (
-      
-      <div className = "chat-page">
-        <div className = "grid-item user-display" style={{backgroundImage: `url(https://res.cloudinary.com/drvfo389c/image/upload/v1589556393/pear/pets_v0mnpz.jpg)`}}>Talking to:</div>
+      <div>
+        <div className = "message-heading">
+          Chat (Not Fully Implemented)
+        </div>
+        <div className = "chat-page">
+          <div className = "grid-item user-display" style={{backgroundImage: `url(https://res.cloudinary.com/drvfo389c/image/upload/v1589556393/pear/pets_v0mnpz.jpg)`}}>
+            Talking to:
+          </div>
 
-        <div className = "grid-item message-display">
-          <h1 id = "grid-item message-heading">Conversation</h1>
+          <div className = "grid-item message-display">
             {messages.map(messages => (
-                <Message key={messages.text} {...messages} />
-              ))}
+              <Message key={messages.text} {...messages} />
+            ))}
+          </div>
+
+          <div className = "grid-item topic-display" style={{backgroundImage: `url(https://res.cloudinary.com/drvfo389c/image/upload/v1589556393/pear/pets_v0mnpz.jpg)`}}>
+            Talking about:
+          </div>
+
+          <div className = "grid-item message-form">
+            <MessageForm />
+          </div>
+
         </div>
-
-        <div className = "grid-item topic-display" style={{backgroundImage: `url(https://res.cloudinary.com/drvfo389c/image/upload/v1589556393/pear/pets_v0mnpz.jpg)`}}>Talking about:</div>
-
-        <div className = "grid-item message-form">
-          <MessageForm />
-        </div>
-
       </div>
-
   );
 }
 
@@ -65,7 +71,7 @@ function MessageForm() {
   return (
     <div className = "chatBox">
       <h1>Write message: </h1>
-      <form onSubmit={handleSubmit}>  
+      <form onSubmit={handleSubmit}>
         {/* <label for="message">Write a message</label> */}
           <input 
             type="text" 

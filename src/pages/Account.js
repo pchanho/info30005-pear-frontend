@@ -114,25 +114,11 @@ function AccountAddForm() {
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  /*
-  function onLogin() {
-    accountLogin({
-      email, 
-      password
-    });
-  }
-*/
+  
   let history = useHistory();
 
   async function handleLogin(event) {
     event.preventDefault();
-
-    // const prom =  accountLogin({email, password})
-
-
-
-    //alert(await accountLogin({email, password}));
-    //alert(then(value => {await accountLogin({email, password})}));
     
     //if email and password found function returns true 
     var res

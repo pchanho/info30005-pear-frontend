@@ -18,8 +18,8 @@ export default function Landing() {
 
             <section className="about-pear">
                 <h3 className="title">About Pear</h3>
-                <p id='about'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id felis et ipsum bibendum ultrices.
-                    Morbi vitae pulvinar velit. Sed aliquam dictum sapien, id sagittis augue malesuada eu. pien, id sagittis augue malesuad</p>
+                <p id='about'>Pear let's seniors connect with another random individual and talk about the things that interest them.
+                  Simply make an account then create or join a new conversation and you'll be chatting away in moments.</p>
             </section>
 
         </div>

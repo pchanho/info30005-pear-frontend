@@ -18,7 +18,7 @@
 }
 
 .user-display{
-/*   
+/*
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -36,6 +36,7 @@
   border-radius: 30px; */
   grid-area: 1 / 2 / 3 / 4;
   border-radius: 10px;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
 }
 
 .topic-display{
@@ -58,6 +59,7 @@
   border-radius: 30px; */
   border-radius: 10px;
   grid-area: 3 / 2 / 4 / 4;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
 }
 
 #message-heading {
@@ -84,7 +86,7 @@
   text-decoration: none;
   font-weight: bold;
   font-size: 15px;
-  border-radius: 10px; 
+  border-radius: 10px;
   background-color: #d2b48c;
   color: #fff;
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);

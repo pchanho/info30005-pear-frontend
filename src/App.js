@@ -13,6 +13,10 @@ import Footer from "./components/Footer";
 
 export default function App() {
   return (
+
+    //initialise account variable
+    //initialise conversation variable
+
     <Router>
       <div className="App">
         {/* the content */}
@@ -25,21 +29,30 @@ export default function App() {
 
           <Route path="/account">
             <Account />
+            {/* edit account variable */}
           </Route>
 
           <Route path="/home">
             <Nav />
             <Home />
+            {/* edit the conversation variable*/}
+
           </Route>
 
           <Route path="/chat">
             <Nav />
             <Chat />
+            {/* access the account variable */}
+            {/* access the conversation variable*/}
+
+            {/* edit the conversation variable*/}
+
           </Route>
 
           <Route path="/create">
             <Nav />
             <Create />
+            {/* edit the conversation variable*/}
           </Route>
 
           <Route path="/support">

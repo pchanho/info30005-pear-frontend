@@ -24,13 +24,14 @@ export default function Create() {
 function ConversationAddForm() {
     const [topic, setTopic] = useState("");
     const [category, setCategory] = useState("");
-    const [topicImage, setImage] = useState("");
+    const [topicImage, setImage] = useState(null);
+    var image
 
     function onSubmit() {
         addConversation({
             topic,
             category,
-            topicImage
+            image
         });
         // window.location.reload();
     }
@@ -65,6 +66,7 @@ function ConversationAddForm() {
                         setTopic(event.target.value);
                     }}
                 />
+                
                 <br></br>
                 {/*friend added later*/}
                 <p>Add your image</p>
@@ -72,8 +74,11 @@ function ConversationAddForm() {
                   type="file"
                   value={topicImage}
                   onChange={event => {
-                        setImage(event.target.value);
-                  }}
+                    image = event.target.files[0];
+                }}
+                onClick={event => {
+                    event.target.value = null
+                }}
                 />
                 <div className="btn-create-container">
                     <Button className={"btn-create"} onClick={onSubmit}>

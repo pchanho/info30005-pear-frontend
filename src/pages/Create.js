@@ -1,7 +1,7 @@
 import React, { useState} from "react";
-import { addConversation} from "../../api";
-import { useConversations} from "../../api";
+import { addConversation, useConversations} from "../api";
 import {useHistory} from "react-router-dom";
+import "../css/createStyles.css";
 
 export default function Create() {
 
@@ -32,7 +32,7 @@ function ConversationAddForm() {
 
     function handleSubmit(event) {
         event.preventDefault();
-        history.push("/chat");
+        history.push("/home");
     }
 
     return (
@@ -63,7 +63,6 @@ function ConversationAddForm() {
                 />
                 
                 <br></br>
-                {/*friend added later*/}
                 <p>Add your image</p>
                 <input
                   type="file"
@@ -77,9 +76,6 @@ function ConversationAddForm() {
                 />
                 <div className="btn-create-container">
                     <button className={"btn-create"} onClick={onSubmit}>
-                        {/* !!! Only if successful */}
-                        {/* on click redirect to chat page*/}
-                        {/* on click set currentConversation within sessionStorage */}
                         Create
                     </button>
                 </div>
@@ -89,14 +85,4 @@ function ConversationAddForm() {
     );
 }
 
-// function Conversation(conversation) {
-//     const {category} = conversation;
-//     return (
-//         <div key={category}>
-//             <select>
-//                 <option>{category}</option>
-//             </select>
-//         </div>
-//     );
-// }
 

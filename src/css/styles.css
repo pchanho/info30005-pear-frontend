@@ -2,12 +2,6 @@
 /* 	Landing page*/
 /*-------------*!*/
 
-/**{*/
-/*  box-sizing: border-box;*/
-/*  margin: 0;*/
-/*  padding: 0;*/
-/*}*/
-
 .landing, .about-pear {
   margin: 0;
   box-sizing: border-box;
@@ -45,7 +39,7 @@
 }
 
 .bgImg {
-  background-image: url("./img/Img3.jpeg");
+  background-image: url("../img/Img3.jpeg");
   position: relative;
   background-attachment: fixed;
   margin: auto;

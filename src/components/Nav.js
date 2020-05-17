@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import Button from "./Button";
-import "../styles.css";
+import "../css/styles.css";
 
 export default function Nav() {
   return (

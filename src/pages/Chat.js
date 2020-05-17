@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Messages from '../../components/chat/Messages';
-import "../../chatStyles.css";
+import Messages from '../components/chat/Messages';
+import "../css/chatStyles.css";
 import { NavLink } from "react-router-dom";
-import { addMessage, getMessages, useMessages} from "../../api.js";
+import { addMessage, getMessages, useMessages} from "../api.js";
 
 
 export default function Chat(data) {
@@ -16,6 +16,8 @@ export default function Chat(data) {
     }
 
     console.log(messages);
+
+    const topicImage = sessionStorage.getItem('currentTopicImage');
   
     return (
       <div>
@@ -23,7 +25,7 @@ export default function Chat(data) {
           Chat (Not Fully Implemented)
         </div>
         <div className = "chat-page">
-          <div className = "grid-item user-display" style={{backgroundImage: `url(https://res.cloudinary.com/drvfo389c/image/upload/v1589556393/pear/pets_v0mnpz.jpg)`}}>
+          <div className = "grid-item user-display" style={{backgroundImage: `url(https://res.cloudinary.com/drvfo389c/image/upload/v1589694061/pear/profile_hdtz1k.png)`}}>
             Talking to:
           </div>
 
@@ -33,7 +35,7 @@ export default function Chat(data) {
             ))}
           </div>
 
-          <div className = "grid-item topic-display" style={{backgroundImage: `url(https://res.cloudinary.com/drvfo389c/image/upload/v1589556393/pear/pets_v0mnpz.jpg)`}}>
+          <div className = "grid-item topic-display" style={{backgroundImage: `url(${topicImage})`}}>
             Talking about:
           </div>
 

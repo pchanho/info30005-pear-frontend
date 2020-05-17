@@ -43,12 +43,15 @@ function AccountAddForm() {
       password
     });
     console.log(res)
-    if (res.data == "True"){
-      history.push("/home");
+    if(res != null ){
+      if (res.data == "True"){
+        history.push("/home");
+      }
+      else{
+        alert("failed to create account")
+      }
     }
-    else{
-      alert("failed to create account")
-    }
+    
     
   }
 

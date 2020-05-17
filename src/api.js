@@ -83,7 +83,7 @@ export function addAccount(account) {
     const { firstName, lastName, email, birthday, password } = account;
     if (!firstName || !lastName || !email || !birthday || !password) {
         alert("must include all fields");
-        return;
+        return null;
     }
 
     console.log({

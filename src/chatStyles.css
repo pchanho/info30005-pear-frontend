@@ -6,14 +6,13 @@
 .chat-page {
   display: grid;
   grid-gap: 10px;
-  background-color: #789d4a;
-  padding: 150px;
+  padding: 50px;
 }
 
 .grid-item {
   background-color: #ffebcd;
-  text-align: left;
-  padding: 50px;
+  text-align: center;
+  padding: 15px;
   font-size: 18px;
 }
 
@@ -28,10 +27,8 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  min-width: 300px;
-  max-width: 300px;
-  min-height: 300px;
-  max-height: 300px;
+  width: 300px;
+  height: 300px;
 }
 
 .message-display{
@@ -39,6 +36,10 @@
   text-align: left;
   border-radius: 30px; */
   grid-area: 1 / 2 / 3 / 4;
+  max-height: 480px;
+  border-style: solid;
+  border-color: #905a2a;
+  overflow-y: scroll;
   border-radius: 10px;
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
 }
@@ -51,29 +52,32 @@
   width: 10%;
   height: 10%;
   border-radius: 30px; */
+  grid-area: 2 / 1 / 4 / 2;
   border-radius: 10px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  min-width: 300px;
-  max-width: 300px;
-  min-height: 300px;
-  max-height: 300px;
+  width: 300px;
+  height: 300px;
 }
 
 .message-form{
   /*
   text-align: left;
   border-radius: 30px; */
+  border-style: solid;
+  border-color: #905a2a;
   border-radius: 10px;
+  height: 120px;
   grid-area: 3 / 2 / 4 / 4;
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
 }
 
-#message-heading {
-  padding-top: 50px;
+.message-heading {
+  padding-top: 80px;
   padding-bottom: 0;
   text-align: center;
+  font-size: 32px;
   margin: 0;
 }
 

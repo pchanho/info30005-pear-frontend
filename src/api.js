@@ -4,11 +4,12 @@
 
 import { useState, useEffect } from "react";
 import FormData from "form-data"
+import axios from 'axios';
 
-const BASE_URL = "https://info30005-pear.herokuapp.com";
+// const BASE_URL = "https://info30005-pear.herokuapp.com";
 
 //Temporary base url before update heroku server
-//const BASE_URL = "https://info30005-pear.herokuapp.com";
+const BASE_URL = "https://info30005-pear.herokuapp.com";
 // const BASE_URL = "http://localhost:3001";
 
 
@@ -82,7 +83,7 @@ export function addAccount(account) {
     const { firstName, lastName, email, birthday, password } = account;
     if (!firstName || !lastName || !email || !birthday || !password) {
         alert("must include all fields");
-        return;
+        return null;
     }
 
     console.log({
@@ -92,20 +93,36 @@ export function addAccount(account) {
 
     const endpoint = BASE_URL + `/account/create/`;
     console.log("addAccount");
-    
-    return fetch(endpoint, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            firstName,
-            lastName,
-            email, 
-            birthday, 
-            password
-        })
-    }).then(res => window.location.reload());
+
+    return new Promise( function(resolve) {
+        axios({
+            method: 'post',
+            url: endpoint,
+            data: {
+                firstName,
+                lastName,
+                email,
+                birthday,
+                password
+            }
+        }).then(function(json) {
+            resolve(json);
+        });
+    });
+
+    // return fetch(endpoint, {
+    //     method: "POST",
+    //     headers: {
+    //         "Content-Type": "application/json"
+    //     },
+    //     body: JSON.stringify({
+    //         firstName,
+    //         lastName,
+    //         email,
+    //         birthday,
+    //         password
+    //     })
+    // }).then(res => window.location.reload());
 }
 
 export async function accountLogin(login) {
@@ -122,45 +139,19 @@ export async function accountLogin(login) {
 
     const endpoint = BASE_URL + `/account/login/`;
     console.log("login");
-/*
-    const result = async () =>
-        await fetch(endpoint, {
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json"
-            },
-        })
-    .then(res => (res.ok ? res : Promise.reject(res)))
-    .then(res => res.json());
-    return result;
-*/
-/*
-    return fetch(endpoint, {
-        method: "GET",
-        headers: {
-            "Content-Type": "application/json"
-        },
-    }).then(res => window.location.reload());
-    */
 
-    return await fetch(endpoint, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            email,
-            password
-        })
-    }).then(res => res.json)
-    .then(data => {
-        alert(data);
-        console.log('Success:', data);
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-      });
-    
+   return new Promise( function(resolve) {
+        axios({
+            method: 'post',
+            url: endpoint,
+            data: {
+                email,
+                password
+            }
+        }).then(function(json) {
+            resolve(json);
+        });
+    });
 }
 
 
@@ -185,15 +176,15 @@ export function addMessage(message) {
         body: JSON.stringify({
             conversationId,
             senderId,
-            text, 
-            image, 
+            text,
+            image,
             video
         })
     }).then(res => window.location.reload());
 }
 
-function getSpecific(data) {        
-    
+function getSpecific(data) {
+
 
     const conversationId  = data.conversationId;
     if (!conversationId) {

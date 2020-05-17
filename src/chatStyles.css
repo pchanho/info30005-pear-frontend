@@ -7,13 +7,13 @@
   display: grid;
   grid-gap: 10px;
   background-color: #789d4a;
-  padding: 200px;
+  padding: 150px;
 }
 
 .grid-item {
   background-color: #ffebcd;
   text-align: left;
-  padding: 20px;
+  padding: 50px;
   font-size: 18px;
 }
 
@@ -25,6 +25,9 @@
   width: 10%;
   height: 10%; */
   border-radius: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .message-display{
@@ -44,6 +47,9 @@
   height: 10%;
   border-radius: 30px; */
   border-radius: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .message-form{

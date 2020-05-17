@@ -9,8 +9,8 @@ import axios from 'axios';
 // const BASE_URL = "https://info30005-pear.herokuapp.com";
 
 //Temporary base url before update heroku server
-//const BASE_URL = "https://info30005-pear.herokuapp.com";
-const BASE_URL = "http://localhost:3001";
+const BASE_URL = "https://info30005-pear.herokuapp.com";
+// const BASE_URL = "http://localhost:3001";
 
 
 
@@ -101,15 +101,15 @@ export function addAccount(account) {
             data: {
                 firstName,
                 lastName,
-                email, 
-                birthday, 
+                email,
+                birthday,
                 password
             }
         }).then(function(json) {
-            resolve(json);   
-        });      
-    }); 
-    
+            resolve(json);
+        });
+    });
+
     // return fetch(endpoint, {
     //     method: "POST",
     //     headers: {
@@ -118,8 +118,8 @@ export function addAccount(account) {
     //     body: JSON.stringify({
     //         firstName,
     //         lastName,
-    //         email, 
-    //         birthday, 
+    //         email,
+    //         birthday,
     //         password
     //     })
     // }).then(res => window.location.reload());
@@ -149,9 +149,9 @@ export async function accountLogin(login) {
                 password
             }
         }).then(function(json) {
-            resolve(json);   
-        });      
-    });    
+            resolve(json);
+        });
+    });
 }
 
 
@@ -176,15 +176,15 @@ export function addMessage(message) {
         body: JSON.stringify({
             conversationId,
             senderId,
-            text, 
-            image, 
+            text,
+            image,
             video
         })
     }).then(res => window.location.reload());
 }
 
-function getSpecific(data) {        
-    
+function getSpecific(data) {
+
 
     const conversationId  = data.conversationId;
     if (!conversationId) {

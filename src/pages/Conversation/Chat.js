@@ -20,7 +20,7 @@ export default function Chat(data) {
     return (
       
       <div className = "chat-page">
-        <div className = "grid-item user-display" style={{backgroundImage: `url(https://res.cloudinary.com/drvfo389c/image/upload/v1589556393/pear/pets_v0mnpz.jpg)`}}>Bob</div>
+        <div className = "grid-item user-display" style={{backgroundImage: `url(https://res.cloudinary.com/drvfo389c/image/upload/v1589556393/pear/pets_v0mnpz.jpg)`}}>Talking to:</div>
 
         <div className = "grid-item message-display">
           <h1 id = "grid-item message-heading">Conversation</h1>
@@ -29,7 +29,7 @@ export default function Chat(data) {
               ))}
         </div>
 
-        <div className = "grid-item topic-display" style={{backgroundImage: `url(https://res.cloudinary.com/drvfo389c/image/upload/v1589556393/pear/pets_v0mnpz.jpg)`}}>Dog</div>
+        <div className = "grid-item topic-display" style={{backgroundImage: `url(https://res.cloudinary.com/drvfo389c/image/upload/v1589556393/pear/pets_v0mnpz.jpg)`}}>Talking about:</div>
 
         <div className = "grid-item message-form">
           <MessageForm />
@@ -90,13 +90,13 @@ function MessageForm() {
     return (
       <section className='join'>
           <div className={`chat-room conversation-${text}`}  key={text}>
-            <div className="info">
+            <div>
                 {/*{_id}*/}
                
                 <br></br>
-                {text}
+                  {senderId}:
                 <br></br>
-                {senderId}
+                {text}
             </div>
          </div>
       </section>

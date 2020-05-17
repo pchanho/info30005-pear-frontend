@@ -8,7 +8,7 @@ import FormData from "form-data"
 // const BASE_URL = "https://info30005-pear.herokuapp.com";
 
 //Temporary base url before update heroku server
-const BASE_URL = "https://info30005-pear.herokuapp.com";
+const BASE_URL = "http://localhost:3001";
 
 function getConversations() {
     const endpoint = BASE_URL + '/conversation/readAll';

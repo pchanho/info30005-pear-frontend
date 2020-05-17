@@ -1,9 +1,7 @@
 import React from 'react';
 import { useConversations} from "../../api";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import "./homeStyles.css";
-import Button from "../../components/Button";
-// import Button from '../../components/Button';
 
 
 export default function Home() {
@@ -31,10 +29,32 @@ export default function Home() {
 
 function Conversation(conversation) {
     const {_id, status, topic, category, topicImage} = conversation;
+
+    let history = useHistory();
+
+    function storeCurrentConversation(conversation) {
+      history.push("/chat");
+      {/* on click set currentConversation within sessionStorage */}
+    }
+
+
     return (
-      <NavLink to="/chat" className={`conversation-item conversation-${topic}`}  key={topic} style={{backgroundImage: `url(${topicImage})`}}>
+      <button
+        className={`conversation-item conversation-${topic}`}
+        key={topic}
+        style={{backgroundImage: `url(${topicImage})`}}
+        //onClick={storeCurrentConversation(conversation)}
+      >
         🏷 {category}<br></br>🗣 {topic}
-          {/* on click set currentConversation within sessionStorage */}
-      </NavLink>
+      </button>
+
+
+
+
+
+        // onClick={storeCurrentConversation(conversation)}
+
     );
 }
+
+

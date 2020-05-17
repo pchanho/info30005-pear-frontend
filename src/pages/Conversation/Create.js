@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 import { addConversation} from "../../api";
-import Button from "../../components/Button";
 import { useConversations} from "../../api";
-
+import {useHistory} from "react-router-dom";
 
 export default function Create() {
 
@@ -11,21 +10,15 @@ export default function Create() {
         <div>
             <ConversationAddForm />
         </div>
-
-        //What do you want to talk about?
-
-        //Pick a category:
-
-        //Do you want to invite any friends?
-
-        //Spice it up with an image!
     )
 }
+
 function ConversationAddForm() {
     const [topic, setTopic] = useState("");
     const [category, setCategory] = useState("");
     const [topicImage, setImage] = useState(null);
-    var image
+    var image;
+
 
     function onSubmit() {
         addConversation({
@@ -33,11 +26,13 @@ function ConversationAddForm() {
             category,
             image
         });
-        // window.location.reload();
     }
+
+    const history = useHistory();
 
     function handleSubmit(event) {
         event.preventDefault();
+        history.push("/chat");
     }
 
     return (
@@ -81,12 +76,12 @@ function ConversationAddForm() {
                 }}
                 />
                 <div className="btn-create-container">
-                    <Button className={"btn-create"} onClick={onSubmit}>
+                    <button className={"btn-create"} onClick={onSubmit}>
                         {/* !!! Only if successful */}
                         {/* on click redirect to chat page*/}
                         {/* on click set currentConversation within sessionStorage */}
                         Create
-                    </Button>
+                    </button>
                 </div>
 
             </form>
@@ -94,21 +89,14 @@ function ConversationAddForm() {
     );
 }
 
-function ConversationAddImage() {
-
-}
-
-
-
-
-function Conversation(conversation) {
-    const {category} = conversation;
-    return (
-        <div key={category}>
-            <select>
-                <option>{category}</option>
-            </select>
-        </div>
-    );
-}
+// function Conversation(conversation) {
+//     const {category} = conversation;
+//     return (
+//         <div key={category}>
+//             <select>
+//                 <option>{category}</option>
+//             </select>
+//         </div>
+//     );
+// }
 

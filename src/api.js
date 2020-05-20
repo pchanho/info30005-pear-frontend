@@ -71,6 +71,32 @@ export function addConversation(conversation) {
     }).then(res => window.location.reload());
 }
 
+function readOneAccount(data) {
+
+
+    const accountId  = data.accountId;
+    if (!accountId) {
+        alert("must include all fields");
+        return;
+    }
+
+    const endpoint = BASE_URL + '/account/readOneAccount';
+    return fetch(endpoint, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            accountId
+        })
+    }).then(res => res.json());
+}
+
+
+
+
+
+
 /* add account to the database 
 */ 
 export function addAccount(account) {

@@ -137,9 +137,10 @@ function Login() {
     //if email and password found function returns true 
     var res
     res = (await accountLogin({email, password}))
-    console.log(res)
+    console.log(res.data)
     if (res != null){
-      if ( res.data== "True") {
+      if ( res.data!= "False") {
+        sessionStorage.setItem('accountId', res.data);
         history.push("/home");
       }
       else{

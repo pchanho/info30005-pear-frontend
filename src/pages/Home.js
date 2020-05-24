@@ -37,6 +37,7 @@ function Conversation(conversation) {
       event.preventDefault();
       history.push("/chat");
       sessionStorage.setItem('currentTopicImage', topicImage);
+      sessionStorage.setItem('conversationId', _id);
     }
 
 

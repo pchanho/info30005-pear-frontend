@@ -8,7 +8,8 @@ import { addMessage, getMessages, useMessages} from "../api.js";
 
 export default function Chat(data) {
   //conversationId is hardcoded as this page is not fully finished
-  data = {conversationId: "5eae207c2630d000173c63d6"}
+  //data = {conversationId: "5eae207c2630d000173c63d6"}
+  data = {conversationId: sessionStorage.getItem('conversationId')}
   var { loading, messages, error } = useMessages(data);
     if (loading) {
       return <p>Loading...</p>;
@@ -16,6 +17,7 @@ export default function Chat(data) {
     if (error) {
       return <p>Something went wrong: {error.message}</p>;
     }
+
 
     console.log(messages);
 

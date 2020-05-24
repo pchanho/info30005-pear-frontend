@@ -60,8 +60,10 @@ export default function Chat(data) {
 
 function MessageForm() {
    //assign the proper inputs from form
-   const [conversationId, setConversatioId] = useState("");
-   const [senderId, setSenderId] = useState("");
+   //const [conversationId, setConversatioId] = useState("");
+   //const [senderId, setSenderId] = useState("");
+   const conversationId = sessionStorage.getItem('conversationId');
+   const senderId = sessionStorage.getItem('accountId');
    const [text, setText] = useState("");
    const [image, setImage] = useState("");
    const [video, setVideo] = useState("");
@@ -72,9 +74,6 @@ function MessageForm() {
       conversationId,
       senderId, 
       text,
-      image,
-      video
-
     });
 }
   function handleSubmit(event){

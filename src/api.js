@@ -179,6 +179,7 @@ export function addMessage(message) {
         return;
     }
 
+    console.log("made it")
 
     const endpoint = BASE_URL + `/message/create/`;
     return fetch(endpoint, {

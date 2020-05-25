@@ -117,6 +117,8 @@ function MessageForm() {
                   {senderId}:
                 <br></br>
                 {text}
+
+                <input type="submit" value="Report" id='btn'/>
             </div>
          </div>
       </section>

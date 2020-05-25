@@ -27,6 +27,7 @@
 }
 
 .message-display{
+  text-align: left;
   grid-area: 1 / 2 / 3 / 4;
   max-height: 480px;
   border-style: solid;

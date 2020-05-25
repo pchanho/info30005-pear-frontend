@@ -7,7 +7,7 @@ import FormData from "form-data"
 import axios from 'axios';
 
 //Temporary base url before update heroku server
-const BASE_URL = "https://info30005-pear.herokuapp.com";
+const BASE_URL = "http://localhost:3001";
 
 /* retrieve conversation from backend 
 */
@@ -252,4 +252,32 @@ export function useMessages(data) {
         messages,
         error
     };
+}
+
+/*----------------
+ Report API
+----------------*/
+
+/* add report to the database 
+*/
+export function addReport(report) {
+    const {accountId, messageId, reason} = report;
+    if (!accountId || !messageId || !reason) {
+        alert("must include all fields");
+        return;
+    }
+
+
+    const endpoint = BASE_URL + `/report/create/`;
+    return fetch(endpoint, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            accountId,
+            messageId,
+            reason
+        })
+    }).then(res => window.location.reload());
 }

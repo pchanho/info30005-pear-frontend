@@ -1,0 +1,74 @@
+/*!*-------------*/
+/* 	Report page*/
+/*-------------*!*/
+
+.report-page {
+    display: grid;
+    grid-gap: 10px;
+    padding: 50px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    min-height: calc(100vh - 159px);
+  }
+  
+  .grid-item {
+    background-color: #ffebcd;
+    text-align: center;
+    padding: 15px;
+    font-size: 18px;
+  }
+  
+  .reason-display{
+    grid-area: 1 / 2 / 3 / 5;
+    padding: 50px;
+    max-height: 480px;
+    border-style: solid;
+    border-color: #905a2a;
+    border-radius: 10px;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .reason-heading {
+    padding-top: 80px;
+    padding-bottom: 0;
+    text-align: center;
+    font-size: 32px;
+    margin: 0;
+  }
+  
+  #reason-input {
+    width: 80%;
+    height: 30px;
+    overflow-y: scroll;
+  }
+
+  .reasonBox h1 {
+    font-size: 20px;
+  }
+
+  .reasonBox h2 {
+    font-size: 16px;
+  }
+  
+  #btn{
+    width: 150px;
+    height: 35px;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 10px;
+    background-color: #d2b48c;
+    color: #fff;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    border: none;
+  }
+  
+  #btn:hover {
+    background-color: #789d4a;
+    transform: scale(1.1);
+    color: #fff;
+  }
+  

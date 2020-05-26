@@ -22,41 +22,43 @@ export default function App() {
         <Switch>
           <Route exact path="/">
             <Landing />
+            <Footer />
           </Route>
 
           <Route path="/account">
             <Account />
+            <Footer />
           </Route>
 
           <Route path="/home">
             <Nav />
             <Home />
-
+            <Footer />
           </Route>
 
           <Route path="/chat">
             <Nav />
             <Chat />
+            <Footer />
           </Route>
 
           <Route path="/create">
             <Nav />
             <Create />
+            <Footer />
           </Route>
 
           <Route path="/support">
-            <Nav />
             <Support />
           </Route>
 
           <Route path="/report">
             <Nav />
             <Report />
+            <Footer />
           </Route>
 
         </Switch>
-
-        <Footer />
       </div>
     </Router>
   );

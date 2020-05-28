@@ -71,25 +71,29 @@ export function addConversation(conversation) {
     }).then(res => window.location.reload());
 }
 
-function readOneAccount(data) {
+export async function readOneAccount(data) {
 
-
+    
     const accountId  = data.accountId;
     if (!accountId) {
         alert("must include all fields");
         return;
     }
+    
+    
 
-    const endpoint = BASE_URL + '/account/readOneAccount';
-    return fetch(endpoint, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            accountId
+    const endpoint = BASE_URL + '/account/readOne';
+    
+     var  res = await axios({
+            method: 'post',
+            url: endpoint,
+            data: {
+                accountId   
+            }
         })
-    }).then(res => res.json());
+        console.log(res)
+    return res.data
+        
 }
 
 
@@ -100,36 +104,38 @@ function readOneAccount(data) {
 /* add account to the database 
 */ 
 export function addAccount(account) {
-    const { firstName, lastName, email, birthday, password } = account;
+    const { firstName, lastName, email, birthday, password, userImage } = account;
     if (!firstName || !lastName || !email || !birthday || !password) {
         alert("must include all fields");
         return null;
     }
 
-    console.log({
-        firstName,
-        lastName
-    });
 
     const endpoint = BASE_URL + `/account/create/`;
-    console.log("addAccount");
 
-    return new Promise( function(resolve) {
-        axios({
-            method: 'post',
-            url: endpoint,
-            data: {
-                firstName,
-                lastName,
-                email,
-                birthday,
-                password
-            }
-        }).then(function(json) {
-            resolve(json);
-        });
-    });
+   
 
+    const data = new FormData();
+    data.append('firstName', firstName);
+    data.append('lastName', lastName);
+    data.append('email', email);
+    data.append('birthday', birthday);
+    data.append('password', password);
+    data.append('userImage', userImage);
+
+    if (userImage == undefined){
+        alert("no image detected, default image used in place")
+    }
+    else{
+        alert("account succesfully created!")
+    }
+    
+    return fetch(endpoint, {
+        method: "POST",
+        body: data
+    }).then(res => window.location.reload());
+
+    
 }
 
 /* attempts to log into the account 
@@ -236,7 +242,7 @@ export function useMessages(data) {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        getSpecific(data)
+        getSpecific(data) 
             .then(messages => {
                 setMessages(messages);
                 setLoading(false);

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Messages from '../components/chat/Messages';
 import "../css/chatStyles.css";
 import { NavLink } from "react-router-dom";
-import { addMessage, getMessages, useMessages} from "../api.js";
+import { addMessage, getMessages, useMessages, readOneAccount} from "../api.js";
 
 
 export default function Chat(data) {
@@ -37,9 +37,9 @@ export default function Chat(data) {
           
           
           <div className = "grid-item message-display">
-            {messages.map(messages => (
-              <Message key={messages.text} {...messages} />
-            ))}
+             {messages.map(messages => (
+              <Message key={messages._id} {...messages} />
+            ))} 
           </div>
           
           
@@ -56,6 +56,12 @@ export default function Chat(data) {
       </div>
   );
 }
+
+
+// async function readAccount(){
+//   var res = await readOneAccount({accountId: sessionStorage.getItem('accountId')})
+//   return res.data
+// }
 
 
 function MessageForm() {
@@ -106,21 +112,30 @@ function MessageForm() {
      database. However, as this section of the code is not yet fully implemented, conversation is still 
      hardcoded.
   */
-  function Message(message) {
+function Message(message) {
     const {_id, conversationId, senderId, text, image, video, timeSent} = message;
-    
-    return (
-      <section className='join'>
-          <div className={`chat-room conversation-${text}`}  key={text}>
-            <div>
-                <br></br>
-                  {senderId}:
-                <br></br>
-                {text}
+    //used for testing
+    //var acc = '5eca30f4b6642b28b4b00292'
+    //var res = readOneAccount({accountId:acc})
 
-                <input type="submit" value="Report" id='btn'/>
-            </div>
-         </div>
-      </section>
-  );
+     
+
+      return (
+        <section className='join'>
+            <div className={`chat-room conversation-${text}`}  key={text}>
+              <div>
+                  <br></br>
+                    {senderId}:
+                  <br></br>
+                  {text}
+  
+                  <input type="submit" value="Report" id='btn'/>
+              </div>
+           </div>
+        </section>
+    );
+
+    
+    
+    
  }

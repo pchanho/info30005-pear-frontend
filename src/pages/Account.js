@@ -27,7 +27,7 @@ function AccountAddForm() {
   const [email, setEmail] = useState("");
   const [birthday, setBirthday] = useState("");
   const [password, setPassword] = useState("");
- 
+  var userImage
 
   let history = useHistory();
 
@@ -39,7 +39,8 @@ function AccountAddForm() {
       lastName,
       email, 
       birthday, 
-      password
+      password,
+      userImage
     });
     console.log(res)
     if(res != null ){
@@ -105,6 +106,17 @@ function AccountAddForm() {
               setPassword(event.target.value);
             }}
           /> <br />
+          <label>Profile Picture</label>
+           <input
+              type="file"
+              value={userImage}
+              onChange={event => {
+              userImage = event.target.files[0];
+              }}
+              onClick={event => {
+                event.target.value = null
+              }}
+            />
         <input type="submit" value="Submit" className='account-btn' />
       </form>
     </div>
@@ -114,6 +126,7 @@ function AccountAddForm() {
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  
   /*
   function onLogin() {
     accountLogin({

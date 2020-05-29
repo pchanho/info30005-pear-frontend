@@ -71,6 +71,14 @@ export function addConversation(conversation) {
     }).then(res => window.location.reload());
 }
 
+
+/*----------------
+ Account API
+----------------*/
+
+/* add message to the database 
+*/
+
 export async function readOneAccount(data) {
 
     
@@ -96,6 +104,30 @@ export async function readOneAccount(data) {
         
 }
 
+export function useOneAccount(data) {
+    const [loading, setLoading] = useState(true);
+    const [accounts, setAccounts] = useState([]);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        readOneAccount(data) 
+            .then(accounts => {
+                setAccounts(accounts);
+                setLoading(false);
+            })
+            .catch(e => {
+                console.log(e);
+                setError(e);
+                setLoading(false);
+            });
+    }, []);
+
+    return {
+        loading,
+        accounts,
+        error
+    };
+}
 
 
 

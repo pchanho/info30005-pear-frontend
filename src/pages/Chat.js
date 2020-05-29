@@ -3,13 +3,13 @@ import React, { useState } from "react";
 import Messages from '../components/chat/Messages';
 import "../css/chatStyles.css";
 import { NavLink } from "react-router-dom";
-import { addMessage, getMessages, useMessages, readOneAccount} from "../api.js";
+import { addMessage, getMessages, useMessages, useOneAccount} from "../api.js";
 
 
 export default function Chat(data) {
   //conversationId is hardcoded as this page is not fully finished
   //data = {conversationId: "5eae207c2630d000173c63d6"}
-  data = {conversationId: sessionStorage.getItem('conversationId')}
+  data = {conversationId: sessionStorage.getItem('  conversationId')}
   var { loading, messages, error } = useMessages(data);
     if (loading) {
       return <p>Loading...</p>;
@@ -115,17 +115,13 @@ function MessageForm() {
 function Message(message) {
     const {_id, conversationId, senderId, text, image, video, timeSent} = message;
     //used for testing
-    //var acc = '5eca30f4b6642b28b4b00292'
-    //var res = readOneAccount({accountId:acc})
-
-     
-
+      var account = useOneAccount({accountId:senderId}).accounts
       return (
         <section className='join'>
             <div className={`chat-room conversation-${text}`}  key={text}>
               <div>
                   <br></br>
-                    {senderId}:
+                    {account.firstName}:
                   <br></br>
                   {text}
   

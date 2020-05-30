@@ -3,26 +3,30 @@ import React, { useState } from "react";
 import Messages from '../components/chat/Messages';
 import "../css/chatStyles.css";
 import { NavLink } from "react-router-dom";
-import { addMessage, getMessages, useMessages, useOneAccount} from "../api.js";
+import { addMessage, getMessages, useMessages, useOneAccount,useReadOneConversation} from "../api.js";
 
 
 export default function Chat(data) {
   //conversationId is hardcoded as this page is not fully finished
-  //data = {conversationId: "5eae207c2630d000173c63d6"}
-  data = {conversationId: sessionStorage.getItem('conversationId')}
-  var { loading, messages, error } = useMessages(data);
+  var { loading, messages, error } = useMessages({conversationId: sessionStorage.getItem('conversationId')});
+    console.log(messages)
+  var { loading, conversations, error } = useReadOneConversation({conversationId: sessionStorage.getItem('conversationId')})
+  console.log(conversations)
+  // getPartner(conversations)
+  
+
+
+  
     if (loading) {
       return <p>Loading...</p>;
     }
     if (error) {
       return <p>Something went wrong: {error.message}</p>;
     }
-
-
-    console.log(messages);
-
     const topicImage = sessionStorage.getItem('currentTopicImage');
-  
+
+    
+    
     return (
       <div>
         <div className = "message-heading">
@@ -31,8 +35,11 @@ export default function Chat(data) {
         <div className = "chat-page">
           
           
-          <div className = "grid-item user-display" style={{backgroundImage: `url(https://res.cloudinary.com/drvfo389c/image/upload/v1589694061/pear/profile_hdtz1k.png)`}}>
-            Talking to:
+          <div className = "grid-item user-display"
+          
+           style={{backgroundImage: `url(https://res.cloudinary.com/drvfo389c/image/upload/v1589694061/pear/profile_hdtz1k.png)`}}>
+             
+            Talking to: {getPartner(conversations)}
           </div>
           
           
@@ -130,8 +137,17 @@ function Message(message) {
            </div>
         </section>
     );
-
-    
-    
-    
  }
+
+
+function getPartner(data){
+  console.log(data)
+  console.log(data.participantsId)
+  for (var i = 0; i < data.participantsId.length; i++) {
+    if (data.participantsId[i] != sessionStorage.getItem('accountId') && data.participantsId[i] != null){
+     var participant = data.participantsId[i]
+    }
+    
+  }
+  return participant
+}

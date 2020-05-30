@@ -13,8 +13,57 @@ const BASE_URL = "http://localhost:3001";
 */
 function getConversations() {
     const endpoint = BASE_URL + '/conversation/readAll';
-    console.log(getConversations);
     return fetch(endpoint).then(res => res.json());
+}
+
+
+async function readOneConversation(data){
+    const endpoint = BASE_URL + '/conversation/readOne';
+    const conversationId  = data.conversationId;
+    console.log(conversationId)
+    if (!conversationId) {
+        alert("must include all fields");
+        return;
+    }
+    
+    
+    var res = fetch(endpoint, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            conversationId
+        })
+    }).then(res => res.json());
+    
+    
+    return res
+}
+
+export function useReadOneConversation(data) {
+    const [loading, setLoading] = useState(true);
+    const [conversations, setConversations] = useState([]);
+    const [error, setError] = useState(null);
+    
+    useEffect(() => {
+        readOneConversation(data)
+            .then(conversations => {
+                setConversations(conversations);
+                setLoading(false);
+            })
+            .catch(e => {
+                console.log(e);
+                setError(e);
+                setLoading(false);
+            });
+    }, []);
+
+    return {
+        loading,
+        conversations,
+        error
+    };
 }
 
 /* wrapper for get conversations 
@@ -99,7 +148,6 @@ export async function readOneAccount(data) {
                 accountId   
             }
         })
-        console.log(res)
     return res.data
         
 }
@@ -238,16 +286,15 @@ export function addMessage(message) {
 /* gets messages based on conversation id 
 */
 function getSpecific(data) {
-
-
+    const endpoint = BASE_URL + '/message/readSpecific';
     const conversationId  = data.conversationId;
     if (!conversationId) {
         alert("must include all fields");
         return;
     }
 
-    const endpoint = BASE_URL + '/message/readSpecific';
-    return fetch(endpoint, {
+    
+    var res = fetch(endpoint, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -256,6 +303,10 @@ function getSpecific(data) {
             conversationId
         })
     }).then(res => res.json());
+
+ 
+
+    return res
 }
 
 /* gets all messages from database 

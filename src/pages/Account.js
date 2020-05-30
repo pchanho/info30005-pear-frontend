@@ -45,7 +45,7 @@ function AccountAddForm() {
     console.log(res)
     if(res != null ){
       if (res.data == "True"){
-        history.push("/home");
+        history.push("/support");
       }
       else{
         alert("failed to create account")

@@ -371,3 +371,38 @@ export function addReport(report) {
         })
     }).then(res => window.location.reload());
 }
+
+//Support API
+
+function getSupports() {
+    const endpoint = BASE_URL + '/support/readAll';
+    console.log(getSupports);
+    return fetch(endpoint).then(res => res.json());
+}
+
+/* wrapper for get supports
+*/
+export function useSupports() {
+    const [loading, setLoading] = useState(true);
+    const [supports, setSupports] = useState([]);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        getSupports()
+            .then(conversations => {
+                setSupports(conversations);
+                setLoading(false);
+            })
+            .catch(e => {
+                console.log(e);
+                setError(e);
+                setLoading(false);
+            });
+    }, []);
+
+    return {
+        loading,
+        supports,
+        error
+    };
+}

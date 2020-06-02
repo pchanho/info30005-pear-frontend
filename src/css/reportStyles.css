@@ -35,12 +35,6 @@
     font-size: 32px;
     margin: 0;
   }
-  
-  #reason-input {
-    width: 80%;
-    height: 30px;
-    overflow-y: scroll;
-  }
 
   .reasonBox h1 {
     font-size: 20px;
@@ -52,7 +46,6 @@
   
   #btn{
     width: 150px;
-    height: 35px;
     text-align: center;
     align-items: center;
     text-decoration: none;
@@ -70,5 +63,17 @@
     background-color: #789d4a;
     transform: scale(1.1);
     color: #fff;
+  }
+
+  #reason-input {
+    width: 80%;
+    overflow-y: scroll;
+    padding-bottom: 80px;
+    border: 1px solid #905a2a;
+    border-radius: 4px;
+  }
+
+  .reasonBox input {
+    outline: none;
   }
   

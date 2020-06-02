@@ -372,6 +372,24 @@ export function addReport(report) {
     }).then(res => window.location.reload());
 }
 
+export function reportLogin(reportLogin) {
+    const { password } = reportLogin;
+    if (!password) {
+        alert("must include field");
+        return null;
+    }
+
+    var storedPassword = "info30005";
+
+    if(password === storedPassword) {
+        console.log(process.env.ADMIN);
+        return 'True';
+    }
+    else {
+        return 'False';
+    }
+}
+
 //Support API
 
 function getSupports() {

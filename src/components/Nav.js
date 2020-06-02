@@ -14,8 +14,6 @@ export default function Nav() {
 
         <NavLink to="/support">Support</NavLink>
 
-        <NavLink to="/report">Report</NavLink>
-
         <NavLink exact to="/">Sign Out</NavLink>
         {/* add in some kind of sign out */}
 

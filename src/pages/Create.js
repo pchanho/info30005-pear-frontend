@@ -2,6 +2,7 @@ import React, { useState} from "react";
 import { addConversation, useConversations} from "../api";
 import {useHistory} from "react-router-dom";
 import "../css/createStyles.css";
+import ReactTooltip from "react-tooltip";
 
 export default function Create() {
 
@@ -43,7 +44,7 @@ function ConversationAddForm() {
         <div className="conversation-create">
             <h1>Create a new Conversation - It's Easy!</h1>
             <form className="conversation-create-content" onSubmit={handleSubmit}>
-                <p>Pick a category</p>
+                <p>Enter a conversation category</p>
                 <input
                     type="text"
                     placeholder="Category"
@@ -52,7 +53,8 @@ function ConversationAddForm() {
                     onChange={event => {
                         setCategory(event.target.value);
                     }}
-                />
+                    data-tip="ex) Film, Gardening, Photography, Literature..."
+                /><ReactTooltip />
 
                 <br></br>
                 <p>What do you want to talk about?</p>

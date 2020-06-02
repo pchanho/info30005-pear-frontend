@@ -28,10 +28,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/chatStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/chatStyles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Account.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Account.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Create.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Create.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Support.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Support.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,6 +68,7 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -87,6 +86,7 @@
       <workItem from="1589626488729" duration="9839000" />
       <workItem from="1590162910283" duration="24861000" />
       <workItem from="1590379469413" duration="447000" />
+      <workItem from="1591097687556" duration="2531000" />
     </task>
     <servers />
   </component>
@@ -115,9 +115,26 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1590344599501" />
-    <state x="1777" y="-102" width="670" height="676" key="search.everywhere.popup" timestamp="1589613076581">
-      <screen x="1152" y="-337" width="1920" height="1057" />
+    <state width="730" height="245" key="GridCell.Tab.0.bottom" timestamp="1591098780274">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state width="730" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1591098780274" />
+    <state width="730" height="245" key="GridCell.Tab.0.center" timestamp="1591098780270">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="730" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1591098780270" />
+    <state width="730" height="245" key="GridCell.Tab.0.left" timestamp="1591098780267">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="730" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1591098780267" />
+    <state width="730" height="245" key="GridCell.Tab.0.right" timestamp="1591098780271">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="730" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1591098780271" />
+    <state x="469" y="200" width="670" height="576" key="search.everywhere.popup" timestamp="1591098076363">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="469" y="200" width="670" height="576" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1591098076363" />
     <state x="1777" y="-102" width="670" height="676" key="search.everywhere.popup/1152.-337.1920.1057/0.23.1152.697@1152.-337.1920.1057" timestamp="1589613076581" />
   </component>
 </project>

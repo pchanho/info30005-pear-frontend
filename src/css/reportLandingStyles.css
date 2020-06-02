@@ -1,0 +1,50 @@
+.form {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.return-btn {
+    float: left;
+    margin-left: 100px;
+    margin-top: 50px;
+    
+}
+
+.return-btn, .adminLogin-btn {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 15px 30px;
+    border-radius: 20px;
+    border:none;
+    background-color: #d2b48c;
+    color: #fff;
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.report {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8%;
+    padding: 8%;
+}
+
+.report input {
+    padding: 10px 10px;
+  margin: 5px 5px;
+  margin-bottom: 10px;
+  border: 1px solid #905a2a;
+  border-radius: 4px;
+}
+
+.report input:focus {
+    outline: none;
+    border-width: 3px;
+  }
+
+#title {
+    margin-bottom: 50px;
+}

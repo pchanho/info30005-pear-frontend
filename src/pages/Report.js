@@ -7,7 +7,7 @@ export default function Report(data) {
     <div className = "report-page">    
           
       <div className = "grid-item">
-        AccountId:
+        AccountId: {sessionStorage.getItem('reportUserId')}
       </div>  
           
       <div className = "grid-item reason-display">
@@ -15,7 +15,7 @@ export default function Report(data) {
       </div>  
           
       <div className = "grid-item">
-        MessageId:
+        MessageId: {sessionStorage.getItem('reportMessageId')}
       </div>
       
     </div>

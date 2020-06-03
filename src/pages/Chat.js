@@ -23,10 +23,7 @@ export default function Chat(data) {
     if (error) {
       return <p>Something went wrong: {error.message}</p>;
     }
-    const topicImage = sessionStorage.getItem('currentTopicImage');
 
-    
-    
     return (
       <div>
         <div className = "message-heading">
@@ -50,7 +47,7 @@ export default function Chat(data) {
           </div>
           
           
-          <div className = "grid-item topic-display" style={{backgroundImage: `url(${topicImage})`}}>
+          <div className = "grid-item topic-display" style={{backgroundImage: `url(${conversations.topicImage})`}}>
             Talking about:
           </div>
           

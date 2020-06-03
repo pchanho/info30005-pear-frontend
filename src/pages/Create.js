@@ -23,8 +23,8 @@ function ConversationAddForm() {
     var image;
 
     //on submit the function calls the api add conversation function with input parameters 
-    function onSubmit() {
-        addConversation({
+    async function onSubmit() {
+        await addConversation({
             topic,
             category,
             image
@@ -36,7 +36,7 @@ function ConversationAddForm() {
     //on form submit the page is redirected to home  
     function handleSubmit(event) {
         event.preventDefault();
-        history.push("/home");
+        history.push("/chat");
     }
 
     //JSX for conversation form 
@@ -75,6 +75,7 @@ function ConversationAddForm() {
                   value={topicImage}
                   onChange={event => {
                     image = event.target.files[0];
+                    console.log(image)
                 }}
                 onClick={event => {
                     event.target.value = null

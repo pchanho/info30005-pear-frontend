@@ -5,6 +5,7 @@
 import { useState, useEffect } from "react";
 import FormData from "form-data"
 import axios from 'axios';
+import {useHistory} from "react-router-dom";
 
 //Temporary base url before update heroku server
 const BASE_URL = "http://localhost:3001";
@@ -95,7 +96,7 @@ export function useConversations() {
 
 /* add conversation to the database 
 */
-export function addConversation(conversation) {
+export async function addConversation(conversation) {
     const { topic, category, image } = conversation;
     if (!topic || !category) {
         alert("must include all required fields");
@@ -113,11 +114,22 @@ export function addConversation(conversation) {
 
     const endpoint = BASE_URL + `/conversation/create/`;
     console.log("addConversation");
+
     
-    return fetch(endpoint, {
-        method: "POST",
-        body: data
-    }).then(res => window.location.reload());
+    
+    var res =  axios({
+        method: 'post',
+        url: endpoint,
+        data: data,
+        headers: {'Content-Type': 'multipart/form-data' }
+    }).then(res => {
+        console.log(res.data._id)
+        sessionStorage.setItem('conversationId', res.data._id);
+        window.location.reload()
+    }
+    );
+    console.log(res)
+    return res
 }
 
 

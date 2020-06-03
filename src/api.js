@@ -369,19 +369,25 @@ export function addReport(report) {
         return;
     }
 
+    const data = new FormData();
+    data.append('accountId', accountId);
+    data.append('messageId', messageId);
+    data.append('reason', reason);
 
     const endpoint = BASE_URL + `/report/create/`;
-    return fetch(endpoint, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            accountId,
-            messageId,
-            reason
-        })
-    }).then(res => window.location.reload());
+    var res =  axios({
+        method: 'post',
+        url: endpoint,
+        data: data,
+        headers: {'Content-Type': 'multipart/form-data' }
+    }).then(res => {
+        console.log(res.data._id)
+       
+    }
+    );
+    console.log(res)
+    return res
+    // .then(res => window.location.reload());
 }
 
 export function reportLogin(reportLogin) {

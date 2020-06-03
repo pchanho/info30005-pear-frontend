@@ -54,7 +54,9 @@ function ReasonForm() {
          placeholder="Type your reason"
          value={reason}  
          onChange={event => {
-           setReason(event.target.value);
+            setAccountId(sessionStorage.getItem('reportUserId'))
+            setMessageId(sessionStorage.getItem('reportMessageId'))
+            setReason(event.target.value);
           }}
            
         /> 

@@ -24,11 +24,13 @@ function ConversationAddForm() {
 
     //on submit the function calls the api add conversation function with input parameters 
     async function onSubmit() {
+        history.push("/loading");
         await addConversation({
             topic,
             category,
             image
         });
+        history.push("/chat");
     }
 
     const history = useHistory();
@@ -36,7 +38,7 @@ function ConversationAddForm() {
     //on form submit the page is redirected to home  
     function handleSubmit(event) {
         event.preventDefault();
-        history.push("/chat");
+        //history.push("/loading");
     }
 
     //JSX for conversation form 

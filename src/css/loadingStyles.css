@@ -1,0 +1,16 @@
+.loading{
+    padding: 20px;
+    width: 47%;
+    float: center;
+    border-style: solid;
+    border-color: #905a2a;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 90px;
+    position: absolute;
+
+    top: 50%;
+    left: 30%;
+    margin-left: -50px; /* margin is -0.5 * dimension */
+    margin-top: -25px; 
+}

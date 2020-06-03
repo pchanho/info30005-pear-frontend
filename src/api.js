@@ -125,7 +125,7 @@ export async function addConversation(conversation) {
     }).then(res => {
         console.log(res.data._id)
         sessionStorage.setItem('conversationId', res.data._id);
-        window.location.reload()
+        //window.location.reload()
     }
     );
     console.log(res)

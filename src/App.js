@@ -7,6 +7,7 @@ import Report from "./pages/Report";
 import Home from "./pages/Home";
 import Create from "./pages/Create";
 import Chat from "./pages/Chat";
+import Loading from "./pages/Loading";
 import Nav from "./components/Nav";
 import "./css/styles.css";
 import Footer from "./components/Footer";
@@ -56,6 +57,11 @@ export default function App() {
             <Nav />
             <Report />
             <Footer />
+          </Route>
+
+          <Route path="/loading">
+            <Nav />
+            <Loading />
           </Route>
 
         </Switch>

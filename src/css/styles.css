@@ -164,6 +164,13 @@ footer p {
   margin-bottom: 10px;
 }
 
+footer .adminLink {
+  font-size: 18px;
+  color: #fff;
+  background-color: #414a4f;
+  margin-bottom: 10px;
+}
+
 footer #member {
   font-size: 14px;
 }

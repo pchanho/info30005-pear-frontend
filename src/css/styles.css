@@ -164,7 +164,7 @@ footer p {
   margin-bottom: 10px;
 }
 
-footer adminLink {
+footer .adminLink {
   font-size: 18px;
   color: #fff;
   background-color: #414a4f;

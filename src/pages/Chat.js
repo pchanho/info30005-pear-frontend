@@ -127,7 +127,8 @@ function Message(message) {
 
 
 function Partner(data) {
-  const [userImage, setUserImage] = useState(`url(https://res.cloudinary.com/drvfo389c/image/upload/v1589694061/pear/profile_hdtz1k.png)`);
+  var userImage = `https://res.cloudinary.com/drvfo389c/image/upload/v1589694061/pear/profile_hdtz1k.png`
+  var firstName = 'Waiting on Partipant'
 
   for (var i = 0; i < data.participantsId.length; i++) {
     if (data.participantsId[i] != sessionStorage.getItem('accountId') && data.participantsId[i] != null) {
@@ -135,17 +136,20 @@ function Partner(data) {
     }
   }
   var account = useReadParticipants({ accountId: participant }).accounts
-  console.log(account.userImage)
-
-  console.log(userImage)
   console.log(account)
+  if (account.userImage != undefined){
+    userImage = account.userImage
+  }
+  if (account.firstName != undefined){
+    firstName = account.firstName
+  }
   return (
 
     <div className="grid-item user-display" >
-      {console.log(account.firstName)}
-      <img src={account.userImage}width="250" height="250"></img>
-      {console.log(account.userImage)}
-            Talking to: {account.firstName}
+      <img src={userImage}width="250" height="250"></img>
+            {console.log(firstName)}
+            {console.log(userImage)}
+            Talking to: {firstName} 
     </div>
   );
 }

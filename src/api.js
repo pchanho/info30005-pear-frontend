@@ -144,10 +144,7 @@ export async function readOneAccount(data) {
 
     
     const accountId  = data.accountId;
-    if (!accountId) {
-        alert("must include all fields");
-        return;
-    }
+    
     
     
 

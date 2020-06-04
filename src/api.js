@@ -10,6 +10,14 @@ import {useHistory} from "react-router-dom";
 //Temporary base url before update heroku server
 const BASE_URL = "http://localhost:3001";
 
+
+/*----------------
+ Conversation API
+----------------*/
+
+/* add message to the database 
+*/
+
 /* retrieve conversation from backend 
 */
 function getConversations() {
@@ -131,6 +139,37 @@ export async function addConversation(conversation) {
     console.log(res)
     return res
 }
+
+
+
+export async function addParticipantsInConversation(data) {
+    const { conversationId, participantsId} = data;
+    if (!conversationId || !participantsId) {
+        alert("must include all required fields");
+        return;
+    }
+
+    const formData = new FormData();
+    formData.append('conversationId', conversationId);
+    formData.append('participantsId', participantsId);
+
+    console.log(formData)
+
+    const endpoint = BASE_URL + `/conversation/addParticipants/`;
+
+    var res =  axios({
+        method: 'put',
+        url: endpoint,
+        data: formData,
+        headers: {'Content-Type': 'multipart/form-data' }
+    }).then(res => {
+        console.log(res.data)
+    }
+    );
+    console.log(res)
+    return res
+}
+
 
 
 /*----------------
@@ -432,7 +471,12 @@ export function reportLogin(reportLogin) {
     }
 }
 
-//Support API
+/*----------------
+ Support API
+----------------*/
+
+/* add report to the database 
+*/
 
 function getSupports() {
     const endpoint = BASE_URL + '/support/readAll';

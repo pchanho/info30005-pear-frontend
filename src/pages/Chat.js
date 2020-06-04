@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Messages from '../components/chat/Messages';
 import "../css/chatStyles.css";
 import { NavLink, useHistory } from "react-router-dom";
-import { addMessage, getMessages, useMessages, useOneAccount, useReadOneConversation, useReadParticipants } from "../api.js";
+import { addMessage, getMessages, useMessages, useOneAccount, useReadOneConversation, useReadParticipants, addParticipantsInConversation } from "../api.js";
 
 
 export default function Chat(data) {
@@ -18,6 +18,8 @@ export default function Chat(data) {
   if (error) {
     return <p>Something went wrong: {error.message}</p>;
   }
+
+  addParticipantsInConversation({ conversationId: sessionStorage.getItem('conversationId'),participantsId:sessionStorage.getItem('accountId')})
 
   return (
     <div>

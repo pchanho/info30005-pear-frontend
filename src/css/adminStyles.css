@@ -1,0 +1,48 @@
+.main {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.return-btn {
+    float: left;
+    margin-left: 100px;
+    margin-top: 50px;
+    
+}
+
+.return-btn, .report-btn {
+    
+    width: 150px;
+    height: 35px;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 10px;
+    background-color: #d2b48c;
+    color: #fff;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    border: none;
+}
+
+  
+.report-btn:hover {
+    background-color: #789d4a;
+    transform: scale(1.1);
+    color: #fff;
+}
+
+.commands {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8%;
+    padding: 8%;
+}
+
+#title {
+    margin-bottom: 50px;
+}

@@ -471,6 +471,38 @@ export function reportLogin(reportLogin) {
     }
 }
 
+function getReports() {
+    const endpoint = BASE_URL + '/report/readAll';
+    return fetch(endpoint).then(res => res.json());
+}
+
+/* wrapper for get conversations 
+*/
+export function useReports() {
+    const [loading, setLoading] = useState(true);
+    const [reports, setReports] = useState([]);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        getReports()
+            .then(reports => {
+                setReports(reports);
+                setLoading(false);
+            })
+            .catch(e => {
+                console.log(e);
+                setError(e);
+                setLoading(false);
+            });
+    }, []);
+
+    return {
+        loading,
+        reports,
+        error
+    };
+}
+
 /*----------------
  Support API
 ----------------*/

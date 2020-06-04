@@ -11,6 +11,11 @@ export default function ReportLanding() {
 
         history.push("/");
     }
+    function listButton(event) {
+        event.preventDefault();
+
+        history.push("/reportList");
+    }
 
     return (
     <div className="main">
@@ -25,7 +30,7 @@ export default function ReportLanding() {
                 Admin Commands
             </h1>
 
-            <button type="submit" className='report-btn'>Reports list</button>
+            <button type="submit" onClick={listButton}className='report-btn'>Reports list</button>
             
         </div>
     </div>

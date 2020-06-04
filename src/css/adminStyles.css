@@ -11,24 +11,25 @@
 }
 
 .return-btn, .report-btn {
-    
-    width: 150px;
-    height: 35px;
-    text-align: center;
-    align-items: center;
     text-decoration: none;
     font-weight: bold;
-    font-size: 15px;
-    border-radius: 10px;
+    font-size: 20px;
+    padding: 15px 30px;
+    border-radius: 20px;
+    border:none;
     background-color: #d2b48c;
     color: #fff;
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
-    border: none;
 }
-
   
 .report-btn:hover {
+    background-color: #789d4a;
+    transform: scale(1.1);
+    color: #fff;
+}
+
+.return-btn:hover {
     background-color: #789d4a;
     transform: scale(1.1);
     color: #fff;

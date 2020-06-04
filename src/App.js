@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route, NavLink} from "react-router-dom";
 import Landing from "./pages/Landing";
 import Account from "./pages/Account";
 import Support from "./pages/Support";
@@ -8,9 +8,11 @@ import Home from "./pages/Home";
 import Create from "./pages/Create";
 import Chat from "./pages/Chat";
 import Loading from "./pages/Loading";
+import ReportLanding from "./pages/ReportLanding"
 import Nav from "./components/Nav";
 import "./css/styles.css";
 import Footer from "./components/Footer";
+import LandingFooter from "./components/LandingFooter"
 
 export default function App() {
   return (
@@ -23,7 +25,7 @@ export default function App() {
         <Switch>
           <Route exact path="/">
             <Landing />
-            <Footer />
+            <LandingFooter />
           </Route>
 
           <Route path="/account">
@@ -62,6 +64,10 @@ export default function App() {
           <Route path="/loading">
             <Nav />
             <Loading />
+          </Route>
+
+          <Route path="/reportLanding">
+            <ReportLanding />
           </Route>
 
         </Switch>

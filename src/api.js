@@ -10,6 +10,14 @@ import {useHistory} from "react-router-dom";
 //Temporary base url before update heroku server
 const BASE_URL = "http://localhost:3001";
 
+
+/*----------------
+ Conversation API
+----------------*/
+
+/* add message to the database 
+*/
+
 /* retrieve conversation from backend 
 */
 function getConversations() {
@@ -133,6 +141,37 @@ export async function addConversation(conversation) {
 }
 
 
+
+export async function addParticipantsInConversation(data) {
+    const { conversationId, participantsId} = data;
+    if (!conversationId || !participantsId) {
+        alert("must include all required fields");
+        return;
+    }
+
+    const formData = new FormData();
+    formData.append('conversationId', conversationId);
+    formData.append('participantsId', participantsId);
+
+    console.log(formData)
+
+    const endpoint = BASE_URL + `/conversation/addParticipants/`;
+
+    var res =  axios({
+        method: 'put',
+        url: endpoint,
+        data: formData,
+        headers: {'Content-Type': 'multipart/form-data' }
+    }).then(res => {
+        console.log(res.data)
+    }
+    );
+    console.log(res)
+    return res
+}
+
+
+
 /*----------------
  Account API
 ----------------*/
@@ -144,10 +183,7 @@ export async function readOneAccount(data) {
 
     
     const accountId  = data.accountId;
-    if (!accountId) {
-        alert("must include all fields");
-        return;
-    }
+    
     
     
 
@@ -163,6 +199,33 @@ export async function readOneAccount(data) {
     return res.data
         
 }
+
+
+export function useReadParticipants(data) {
+    const [loading, setLoading] = useState(true);
+    const [accounts, setAccounts] = useState([]);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        readOneAccount(data) 
+            .then(accounts => {
+                setAccounts(accounts);
+                setLoading(false);
+            })
+            .catch(e => {
+                console.log(e);
+                setError(e);
+                setLoading(false);
+            });
+    }, []);
+
+    return {
+        loading,
+        accounts,
+        error
+    };
+}
+
 
 export function useOneAccount(data) {
     const [loading, setLoading] = useState(true);
@@ -408,7 +471,12 @@ export function reportLogin(reportLogin) {
     }
 }
 
-//Support API
+/*----------------
+ Support API
+----------------*/
+
+/* add report to the database 
+*/
 
 function getSupports() {
     const endpoint = BASE_URL + '/support/readAll';

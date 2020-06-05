@@ -33,6 +33,12 @@ export default function ReportLanding() {
         history.push("/");
     }
 
+    function loginButton(event) {
+        event.preventDefault();
+
+        history.push("/admin");
+    }
+
     return (
     <div className="form">
 
@@ -55,7 +61,7 @@ export default function ReportLanding() {
                     setPassword(event.target.value);
                     }}
                 />
-                <button type="submit" className='adminLogin-btn'>Login</button>
+                <button type="submit" onClick={loginButton} className='adminLogin-btn'>Login</button>
             </form>
         </div>
     </div>

@@ -10,6 +10,7 @@ import Chat from "./pages/Chat";
 import Loading from "./pages/Loading";
 import ReportLanding from "./pages/ReportLanding"
 import Admin from "./pages/Admin"
+import ReportList from "./pages/ReportList"
 import Nav from "./components/Nav";
 import "./css/styles.css";
 import Footer from "./components/Footer";
@@ -73,6 +74,10 @@ export default function App() {
 
           <Route path="/admin">
             <Admin />
+          </Route>
+
+          <Route path="/reportList">
+            <ReportList />
           </Route>
 
         </Switch>

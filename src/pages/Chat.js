@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Messages from '../components/chat/Messages';
 import "../css/chatStyles.css";
 import { NavLink, useHistory } from "react-router-dom";
-import { addMessage, getMessages, useMessages, useOneAccount, useReadOneConversation, useReadParticipants, addParticipantsInConversation } from "../api.js";
+import { addMessage, getMessages, useMessages, useOneAccount, useReadOneConversation, useReadParticipants, addParticipantsInConversation, removeParticipantsInConversation } from "../api.js";
 
 
 export default function Chat(data) {
@@ -19,7 +19,7 @@ export default function Chat(data) {
     return <p>Something went wrong: {error.message}</p>;
   }
 
-  addParticipantsInConversation({ conversationId: sessionStorage.getItem('conversationId'),participantsId:sessionStorage.getItem('accountId')})
+  addParticipantsInConversation({ conversationId: sessionStorage.getItem('conversationId'), participantsId: sessionStorage.getItem('accountId')})
 
   return (
     <div>
@@ -39,9 +39,9 @@ export default function Chat(data) {
 
 
         <div className="grid-item topic-display">
-        <img src={conversations.topicImage}width="250" height="250"></img>
+          <img src={conversations.topicImage} width="250" height="250"></img>
           Talking about: {conversations.topic}
-          </div>
+        </div>
 
 
         <div className="grid-item message-form">
@@ -69,6 +69,9 @@ function MessageForm() {
       text,
     });
   }
+  function onSubmit2() {
+    removeParticipantsInConversation({ conversationId: sessionStorage.getItem('conversationId'), participantsId: sessionStorage.getItem('accountId') })
+  }
   function handleSubmit(event) {
     event.preventDefault();
   }
@@ -77,7 +80,6 @@ function MessageForm() {
     <div className="chatBox">
       <h1>Write message: </h1>
       <form onSubmit={handleSubmit}>
-        {/* <label for="message">Write a message</label> */}
         <input
           type="text"
           name="message"
@@ -90,6 +92,8 @@ function MessageForm() {
         /> <br />
 
         <input type="submit" value="Send" id='btn' onClick={onSubmit} />
+
+        <input type="submit" value="Leave" id='btn' onClick={onSubmit2} />
       </form>
     </div>
   );
@@ -100,6 +104,7 @@ function MessageForm() {
    hardcoded.
 */
 function Message(message) {
+  var intervalID;
   const history = useHistory();
   const { _id, conversationId, senderId, text, image, video, timeSent } = message;
   //used for testing
@@ -139,19 +144,19 @@ function Partner(data) {
   }
   var account = useReadParticipants({ accountId: participant }).accounts
   console.log(account)
-  if (account.userImage != undefined){
+  if (account.userImage != undefined) {
     userImage = account.userImage
   }
-  if (account.firstName != undefined){
+  if (account.firstName != undefined) {
     firstName = account.firstName
   }
   return (
 
     <div className="grid-item user-display" >
-      <img src={userImage}width="250" height="250"></img>
-            {console.log(firstName)}
-            {console.log(userImage)}
-            Talking to: {firstName} 
+      <img src={userImage} width="250" height="250"></img>
+      {console.log(firstName)}
+      {console.log(userImage)}
+            Talking to: {firstName}
     </div>
   );
 }

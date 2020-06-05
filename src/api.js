@@ -25,6 +25,11 @@ function getConversations() {
     return fetch(endpoint).then(res => res.json());
 }
 
+function getNewConversations() {
+    const endpoint = BASE_URL + '/conversation/readNew';
+    return fetch(endpoint).then(res => res.json());
+}
+
 
 async function readOneConversation(data){
     const endpoint = BASE_URL + '/conversation/readOne';
@@ -83,7 +88,7 @@ export function useConversations() {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        getConversations()
+        getNewConversations()
             .then(conversations => {
                 setConversations(conversations);
                 setLoading(false);
@@ -171,6 +176,34 @@ export async function addParticipantsInConversation(data) {
 }
 
 
+export async function removeParticipantsInConversation(data) {
+    const { conversationId, participantsId} = data;
+    if (!conversationId || !participantsId) {
+        alert("must include all required fields");
+        return;
+    }
+    
+    const formData = new FormData();
+    formData.append('conversationId', conversationId);
+    formData.append('participantsId', participantsId);
+
+    console.log(formData)
+    alert("DONE")
+
+    const endpoint = BASE_URL + `/conversation/removeParticipants/`;
+
+    var res =  axios({
+        method: 'put',
+        url: endpoint,
+        data: formData,
+        headers: {'Content-Type': 'multipart/form-data' }
+    }).then(res => {
+        console.log(res.data)
+    }
+    );
+    console.log(res)
+    return res
+}
 
 /*----------------
  Account API
@@ -205,7 +238,7 @@ export function useReadParticipants(data) {
     const [loading, setLoading] = useState(true);
     const [accounts, setAccounts] = useState([]);
     const [error, setError] = useState(null);
-
+    console.log("ACALLED")
     useEffect(() => {
         readOneAccount(data) 
             .then(accounts => {
@@ -476,7 +509,7 @@ function getReports() {
     return fetch(endpoint).then(res => res.json());
 }
 
-/* wrapper for get conversations 
+/* wrapper for get reports 
 */
 export function useReports() {
     const [loading, setLoading] = useState(true);

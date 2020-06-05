@@ -1,7 +1,7 @@
 import React from 'react';
 import { useReports} from "../api";
 import { NavLink, useHistory } from "react-router-dom";
-import "../css/createStyles.css";
+import "../css/reportListStyles.css";
 
 // Present conversation list, conversation creation
 export default function ReportList() {
@@ -14,11 +14,11 @@ export default function ReportList() {
     }
 
     return (
-      <div>
-        <h1>Report List</h1>
+      <div className="main">
+        <h1 id ="title">Report List</h1>
         <div>
           {reports.map(report => (
-            <Report key={report.id} {...report} />
+            <Report key={report._id} {...report} />
             ))}
         </div>
       </div>
@@ -36,8 +36,15 @@ function Report(report) {
     //     style={{backgroundImage: `url(${topicImage})`}}
     //     onClick={handleClick}
     //   >
-        <div>
-        <h1>{_id} {accountId} {messageId} {reason} {status} {outcome}</h1>
+        <div className = "report">
+
+        id: {_id} <br></br>
+        accountId: {accountId} <br></br>
+        messageId: {messageId} <br></br>
+        Reason:    {reason} <br></br>
+        Status:    {status} <br></br>
+        Outcome:   {outcome} <br></br>
+        <br></br>
         <br></br>
         </div>
     );

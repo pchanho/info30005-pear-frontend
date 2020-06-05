@@ -476,7 +476,7 @@ function getReports() {
     return fetch(endpoint).then(res => res.json());
 }
 
-/* wrapper for get conversations 
+/* wrapper for get reports 
 */
 export function useReports() {
     const [loading, setLoading] = useState(true);

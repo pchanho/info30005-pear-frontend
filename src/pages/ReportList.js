@@ -23,13 +23,18 @@ export default function ReportList() {
 
     return (
       <div className="main">
-        <h1 id ="title">Report List</h1>
-        <div>
-          {reports.map(report => (
-            <Report key={report._id} {...report} />
-            ))}
+        <div className="Nav-bar">
+        <h2 id="nav-logo-text">Pear</h2>
         </div>
-          <button type="submit" onClick={returnButton} className='return-btn'>Return to Home Page</button>
+        <button type="submit" onClick={returnButton} className='return-btn'>Return to Home Page</button>
+        <div className = "box">
+            <h1 id ="title-report-list">Report List</h1>
+            <div>
+                {reports.map(report => (
+                    <Report key={report._id} {...report} />
+            ))}
+            </div>
+        </div>
       </div>
     );
 }
@@ -45,7 +50,7 @@ function Report(report) {
     //     style={{backgroundImage: `url(${topicImage})`}}
     //     onClick={handleClick}
     //   >
-        <div className = "report">
+        <div className = "box-data">
 
         id: {_id} <br></br>
         accountId: {accountId} <br></br>

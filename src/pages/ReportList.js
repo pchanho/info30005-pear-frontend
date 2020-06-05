@@ -1,7 +1,7 @@
 import React from 'react';
 import { useReports} from "../api";
 import { NavLink, useHistory } from "react-router-dom";
-import "../css/reportListStyles.css";
+import "../css/createStyles.css";
 
 // Present conversation list, conversation creation
 export default function ReportList() {
@@ -14,9 +14,9 @@ export default function ReportList() {
     }
 
     return (
-      <div className='join-main'>
-        <h1 id='join-heading'>Report List</h1>
-        <div className="join-container">
+      <div>
+        <h1>Report List</h1>
+        <div>
           {reports.map(report => (
             <Report key={report.id} {...report} />
             ))}
@@ -27,17 +27,19 @@ export default function ReportList() {
 
 // Fetch report data from mongoDB
 function Report(report) {
-    const {_id, accountId, messageId, status, outcome} = report;
-
+    const {_id, accountId, messageId, reason, status, outcome} = report;
+    
     return (
-      <button
-        className={`conversation-item conversation-${topic}`}
-        key={topic}
-        style={{backgroundImage: `url(${topicImage})`}}
-        onClick={handleClick}
-      >
-        🏷 {category}<br></br>🗣 {topic}
-      </button>
+    //   <button
+    //     className={`conversation-item conversation-${topic}`}
+    //     key={topic}
+    //     style={{backgroundImage: `url(${topicImage})`}}
+    //     onClick={handleClick}
+    //   >
+        <div>
+        <h1>{_id} {accountId} {messageId} {reason} {status} {outcome}</h1>
+        <br></br>
+        </div>
     );
 }
 

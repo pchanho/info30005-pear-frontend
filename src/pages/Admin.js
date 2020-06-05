@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../css/adminStyles.css";
 import {useHistory} from "react-router-dom";
 
-export default function ReportLanding() {
+export default function Admin() {
 
     let history = useHistory();
 

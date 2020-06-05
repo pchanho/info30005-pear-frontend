@@ -6,11 +6,19 @@ import "../css/createStyles.css";
 // Present conversation list, conversation creation
 export default function ReportList() {
     const { loading, reports, error } = useReports();
+    let history = useHistory();
+
     if (loading) {
         return <p>Loading...</p>;
     }
     if (error) {
         return <p>Something went wrong: {error.message}</p>;
+    }
+
+    function returnButton(event) {
+        event.preventDefault();
+
+        history.push("/");
     }
 
     return (
@@ -21,6 +29,7 @@ export default function ReportList() {
             <Report key={report.id} {...report} />
             ))}
         </div>
+          <button type="submit" onClick={returnButton} className='return-btn'>Return to Home Page</button>
       </div>
     );
 }

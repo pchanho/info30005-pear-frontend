@@ -3,6 +3,7 @@
  */
 
 import React, { useState } from 'react';
+import {useHistory} from "react-router-dom";
 import "../css/reportStyles.css";
 import {addReport} from "../api.js";
 
@@ -36,18 +37,20 @@ function ReasonForm() {
   const [accountId, setAccountId] = useState("");
   const [messageId, setMessageId] = useState("");
   const [reason, setReason] = useState("");
- 
+
+  let history = useHistory();
+
  //on submit, add message to mongoDB database
  function onSubmit() {
    addReport({
      accountId,
      messageId, 
      reason
-
    });
 }
  function handleSubmit(event){
    event.preventDefault();
+   history.push("/chat");
  }
 
  /* form contains a box for reason output and using session storage, 

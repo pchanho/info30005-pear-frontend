@@ -14,7 +14,7 @@ export default function Nav() {
         <NavLink to="/support">Support</NavLink>
 
         <NavLink exact to="/">Sign Out</NavLink>
-        {/* add in some kind of sign out */}
+        {/* TODO add in some kind of sign out */}
 
       </nav>
     </div>

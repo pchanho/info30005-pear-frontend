@@ -16,6 +16,7 @@ import "./css/styles.css";
 import Footer from "./components/Footer";
 import LandingFooter from "./components/LandingFooter";
 import ChatNav from "./components/ChatNav";
+import AdminNav from "./components/AdminNav";
 
 export default function App() {
   return (
@@ -70,14 +71,17 @@ export default function App() {
           </Route>
 
           <Route path="/reportLanding">
+            <AdminNav />
             <ReportLanding />
           </Route>
 
           <Route path="/admin">
+            <AdminNav />
             <Admin />
           </Route>
 
           <Route path="/reportList">
+            <AdminNav />
             <ReportList />
           </Route>
 

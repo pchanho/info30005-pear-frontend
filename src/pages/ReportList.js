@@ -15,18 +15,8 @@ export default function ReportList() {
         return <p>Something went wrong: {error.message}</p>;
     }
 
-    function returnButton(event) {
-        event.preventDefault();
-
-        history.push("/");
-    }
-
     return (
       <div className="main">
-        <div className="Nav-bar">
-        <h2 id="nav-logo-text">Pear</h2>
-        </div>
-        <button type="submit" onClick={returnButton} className='return-btn'>Return to Home Page</button>
         <div className = "box">
             <h1 id ="title-report-list">Report List</h1>
             <div>

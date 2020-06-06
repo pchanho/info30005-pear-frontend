@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { reportLogin} from "../api";
 import "../css/reportLandingStyles.css";
-import Landing from "./Landing";
 import {NavLink, useHistory} from "react-router-dom";
 
 export default function ReportLanding() {
@@ -27,12 +26,6 @@ export default function ReportLanding() {
         }
     }
 
-    function returnButton(event) {
-        event.preventDefault();
-
-        history.push("/");
-    }
-
     function loginButton(event) {
         event.preventDefault();
 
@@ -41,12 +34,6 @@ export default function ReportLanding() {
 
     return (
     <div className="form">
-
-        <div className="Nav-bar">
-        <h2 id="nav-logo-text">Pear</h2>
-        </div>
-        <button type="submit" onClick={returnButton} className='return-btn'>Return to Home Page</button>
-        
         <div className="report">
             <h1 id = "title">
                 Admin Access
@@ -61,7 +48,7 @@ export default function ReportLanding() {
                     setPassword(event.target.value);
                     }}
                 />
-                <button type="submit" onClick={loginButton} className='adminLogin-btn'>Login</button>
+                <button type="submit" onClick={loginButton} className='report-btn'>Login</button>
             </form>
         </div>
     </div>

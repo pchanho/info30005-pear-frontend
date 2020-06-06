@@ -510,6 +510,8 @@ export function reportLogin(reportLogin) {
     }
 }
 
+/* gets all messages from reports
+*/
 function getReports() {
     const endpoint = BASE_URL + '/report/readAll';
     return fetch(endpoint).then(res => res.json());

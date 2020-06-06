@@ -1,7 +1,14 @@
+/* Report page handles the creation/submission of report
+ * Reporting feature of Pear  
+ */
+
 import React, { useState } from 'react';
 import "../css/reportStyles.css";
 import {addReport} from "../api.js";
 
+/* function contains the overall structure of report page with links
+ * to reason form
+ */
 export default function Report(data) {
   return (
     <div className = "report-page">    
@@ -22,6 +29,8 @@ export default function Report(data) {
   );
 }
 
+/* function contains the fields required to create a report and handles report
+   creation with the database on form submit  */
 function ReasonForm() {
   //assign the proper inputs from form
   const [accountId, setAccountId] = useState("");
@@ -41,6 +50,9 @@ function ReasonForm() {
    event.preventDefault();
  }
 
+ /* form contains a box for reason output and using session storage, 
+  * accountId and messageId are procured
+  */
  return (
    <div className = "reasonBox">
      <h1>Write reason: </h1>

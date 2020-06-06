@@ -3,7 +3,7 @@ import {NavLink, useHistory} from "react-router-dom";
 import "../css/styles.css";
 
 // Nav specifies where to navigate for each menu
-export default function AdminNav() {
+export default function ReturnToLandingNav() {
 
   let history = useHistory();
 
@@ -18,7 +18,7 @@ export default function AdminNav() {
       <h2 id="nav-logo-text">Pear</h2>
       <nav>
 
-        <button type="submit" onClick={returnButton}>Return to Home Page</button>
+        <button type="submit" onClick={returnButton}>Return to Landing Page</button>
 
       </nav>
     </div>

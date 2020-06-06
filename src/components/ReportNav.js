@@ -8,7 +8,7 @@ export default function ReportNav() {
     <div className="Nav-bar">
       <h2 id="nav-logo-text">Pear</h2>
       <nav>
-        <NavLink to="/">Return to Chat</NavLink>
+        <NavLink to="/chat">Return to Chat</NavLink>
       </nav>
     </div>
   );

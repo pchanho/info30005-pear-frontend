@@ -25,12 +25,15 @@ function getConversations() {
     return fetch(endpoint).then(res => res.json());
 }
 
+/* retrieve conversation from the backend that are not full
+*/
 function getNewConversations() {
     const endpoint = BASE_URL + '/conversation/readNew';
     return fetch(endpoint).then(res => res.json());
 }
 
-
+/* retrieve conversation from backend based on id
+*/
 async function readOneConversation(data){
     const endpoint = BASE_URL + '/conversation/readOne';
     const conversationId  = data.conversationId;
@@ -55,6 +58,8 @@ async function readOneConversation(data){
     return res
 }
 
+/*wrapper for read one conversation
+*/
 export function useReadOneConversation(data) {
     const [loading, setLoading] = useState(true);
     const [conversations, setConversations] = useState([]);
@@ -138,14 +143,13 @@ export async function addConversation(conversation) {
     }).then(res => {
         console.log(res.data._id)
         sessionStorage.setItem('conversationId', res.data._id);
-        //window.location.reload()
     }
     );
     console.log(res)
     return res
 }
 
-
+//records participants who enter a chat
 
 export async function addParticipantsInConversation(data) {
     const { conversationId, participantsId} = data;

@@ -27,11 +27,6 @@
     <list default="true" id="5b1df608-f79b-41e5-a70f-3f7bdd2de550" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/reportLandingStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/reportLandingStyles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ReportLanding.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ReportLanding.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ReportList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ReportList.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

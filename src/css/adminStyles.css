@@ -1,8 +1,10 @@
+/* main encapsulates the page, general styling of page */
 .main {
     padding-top: 100px;
     padding-bottom: 100px;
 }
 
+/* styling for different button types */
 .return-btn {
     float: left;
     margin-left: 100px;
@@ -34,6 +36,8 @@
     transform: scale(1.1);
     color: #fff;
 }
+
+/* styling used in displaying features in admin page */
 
 .commands {
     box-sizing: border-box;

@@ -183,12 +183,12 @@ export async function removeParticipantsInConversation(data) {
         return;
     }
     
+    alert("You have now left this conversation!");
     const formData = new FormData();
     formData.append('conversationId', conversationId);
     formData.append('participantsId', participantsId);
 
     console.log(formData)
-    alert("DONE")
 
     const endpoint = BASE_URL + `/conversation/removeParticipants/`;
 
@@ -198,6 +198,7 @@ export async function removeParticipantsInConversation(data) {
         data: formData,
         headers: {'Content-Type': 'multipart/form-data' }
     }).then(res => {
+       
         console.log(res.data)
     }
     );
@@ -313,15 +314,14 @@ export function addAccount(account) {
     if (userImage == undefined){
         alert("no image detected, default image used in place")
     }
-    else{
-        alert("account succesfully created!")
-    }
     
     //returns the status of the login (true, false)
     return fetch(endpoint, {
         method: "POST",
         body: data
-    }).then(res => window.location.reload());
+    }).then(res => {window.location.reload()
+        alert("account succesfully created! You can now log in!")}
+        );
 
     
 }
@@ -482,6 +482,7 @@ export function addReport(report) {
         data: data,
         headers: {'Content-Type': 'multipart/form-data' }
     }).then(res => {
+        alert("report succesfully submitted!")
         console.log(res.data._id)
        
     }
@@ -509,6 +510,8 @@ export function reportLogin(reportLogin) {
     }
 }
 
+/* gets all messages from reports
+*/
 function getReports() {
     const endpoint = BASE_URL + '/report/readAll';
     return fetch(endpoint).then(res => res.json());

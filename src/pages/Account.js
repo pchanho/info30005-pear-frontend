@@ -13,9 +13,6 @@ import {useHistory} from "react-router-dom";
 export default function Account() {
   return (
     <div>
-      <div className="Nav-bar">
-        <h2 id="nav-logo-text">Pear</h2>
-      </div>
       <section className="forms">
         <div className="account">
           <AccountAddForm />

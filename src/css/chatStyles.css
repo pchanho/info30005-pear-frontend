@@ -2,6 +2,7 @@
 /* 	Chat page*/
 /*-------------*!*/
 
+/* general styling for chat-page */
 .chat-page {
   display: grid;
   grid-gap: 10px;
@@ -9,6 +10,7 @@
   padding-right: 80px;
 }
 
+/* styling for grids in page */
 .grid-item {
   background-color: #ffebcd;
   text-align: center;
@@ -16,6 +18,7 @@
   font-size: 18px;
 }
 
+/* styling and layout for user-display */
 .user-display{
   border-radius: 10px;
   background-repeat: no-repeat;
@@ -27,6 +30,7 @@
   text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
+/* styling and layout for message-display */
 .message-display{
   text-align: left;
   grid-area: 1 / 2 / 3 / 4;
@@ -39,6 +43,7 @@
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* styling and layout for topic-display */
 .topic-display{
   grid-area: 2 / 1 / 4 / 2;
   border-radius: 10px;
@@ -51,6 +56,7 @@
   text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
+/* styling for message form */
 .message-form{
   border-style: solid;
   border-color: #905a2a;
@@ -88,6 +94,7 @@
   padding-bottom: 5px;
 }
 
+/* styling for buttons */
 #chatReport-btn, #send-btn, #leave-btn {
   text-align: center;
   align-items: center;

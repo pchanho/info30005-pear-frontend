@@ -10,7 +10,7 @@
     
 }
 
-.return-btn, .adminLogin-btn {
+.return-btn {
     text-decoration: none;
     font-weight: bold;
     font-size: 20px;
@@ -23,13 +23,7 @@
     transition: transform 0.3s ease-in-out;
 }
 
-.report-btn:hover {
-    background-color: #789d4a;
-    transform: scale(1.1);
-    color: #fff;
-}
-
-.adminLogin-btn :hover {
+.report-btn :hover {
     background-color: #789d4a;
     transform: scale(1.1);
     color: #fff;

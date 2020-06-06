@@ -12,7 +12,7 @@ export default function Chat(data) {
   var { loading, conversations, error } = useReadOneConversation({ conversationId: sessionStorage.getItem('conversationId') })
   console.log(conversations)
 
-  let history = useHistory(); 
+
 
   if (loading) {
     return <p>Loading...</p>;
@@ -21,19 +21,12 @@ export default function Chat(data) {
     return <p>Something went wrong: {error.message}</p>;
   }
 
-  function onSubmit2(event) {
-    event.preventDefault();
-    removeParticipantsInConversation({ conversationId: sessionStorage.getItem('conversationId'), participantsId: sessionStorage.getItem('accountId') })
-    history.push("/home");
-  }
+
 
   addParticipantsInConversation({ conversationId: sessionStorage.getItem('conversationId'), participantsId: sessionStorage.getItem('accountId')})
 
   return (
     <div>
-      <div className="leave">
-        <button type="submit" id='leave-btn' onClick={onSubmit2}>Leave</button>
-      </div>
       <div className="message-heading">
       </div>
       <div className="chat-page">

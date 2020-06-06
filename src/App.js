@@ -14,7 +14,10 @@ import ReportList from "./pages/ReportList"
 import Nav from "./components/Nav";
 import "./css/styles.css";
 import Footer from "./components/Footer";
-import LandingFooter from "./components/LandingFooter"
+import LandingFooter from "./components/LandingFooter";
+import ChatNav from "./components/ChatNav";
+import ReturnToLandingNav from "./components/ReturnToLandingNav";
+import ReportNav from "./components/ReportNav";
 
 export default function App() {
   return (
@@ -31,6 +34,7 @@ export default function App() {
           </Route>
 
           <Route path="/account">
+            <ReturnToLandingNav />
             <Account />
             <Footer />
           </Route>
@@ -42,7 +46,7 @@ export default function App() {
           </Route>
 
           <Route path="/chat">
-            <Nav />
+            <ChatNav />
             <Chat />
             <Footer />
           </Route>
@@ -58,7 +62,7 @@ export default function App() {
           </Route>
 
           <Route path="/report">
-            <Nav />
+            <ReportNav />
             <Report />
             <Footer />
           </Route>
@@ -69,14 +73,17 @@ export default function App() {
           </Route>
 
           <Route path="/reportLanding">
+            <ReturnToLandingNav />
             <ReportLanding />
           </Route>
 
           <Route path="/admin">
+            <ReturnToLandingNav />
             <Admin />
           </Route>
 
           <Route path="/reportList">
+            <ReturnToLandingNav />
             <ReportList />
           </Route>
 

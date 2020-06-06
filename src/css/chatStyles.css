@@ -55,7 +55,7 @@
   border-style: solid;
   border-color: #905a2a;
   border-radius: 10px;
-  height: 120px;
+  height: 140px;
   grid-area: 3 / 2 / 4 / 4;
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
 }
@@ -71,10 +71,21 @@
 .chatBox input {
   width: 50%;
   height: 30px;
+  border: 1px solid #905a2a;
+  border-radius: 4px;
+}
+
+.chatBox input:focus {
+  outline: none;
+}
+
+.send {
+  padding-top: 10px;
 }
 
 .chatBox h1 {
   font-size: 20px;
+  padding-bottom: 5px;
 }
 
 #chatReport-btn, #send-btn, #leave-btn {

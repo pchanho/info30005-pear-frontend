@@ -99,9 +99,9 @@ function MessageForm() {
           }}
 
         /> <br />
-
-        <input type="submit" value="Send" id='send-btn' onClick={onSubmit} />
-
+        <div className="send">
+          <input type="submit" value="Send" id='send-btn' onClick={onSubmit} />
+        </div>  
 
       </form>
     </div>

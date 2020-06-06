@@ -6,8 +6,9 @@
   color: #777;
   background-color: #ffebcd;
   margin: 0;
-  /*padding: 10px;*/
 }
+
+/* general styling for forms container */
 
 .forms {
   padding: 0;
@@ -17,14 +18,19 @@
   flex-direction: column;
   align-items: center;
 }
+
 .account {
   padding-top: 100px;
   padding-bottom: 80px;
 }
+
 .account h1 {
   text-align: center;
   color: #905a2a;
 }
+
+/* styling for create account form */
+
 .create {
   padding: 20px;
   width: 47%;
@@ -32,6 +38,9 @@
   border-style: solid;
   border-color: #905a2a;
 }
+
+/* styling for login form */
+
 .login {
   padding: 20px;
   width: 47%;
@@ -39,6 +48,8 @@
   border-style: solid;
   border-color: #905a2a;
 }
+
+/* styling for submit form buttons */
 
 .account-btn {
   text-decoration: none;
@@ -59,8 +70,7 @@
   color: #fff;
 }
 
-
-/*.create select, .login select*/
+/* styling for input text boxes within forms */
 
 .create input, .login button, .login input {
   width: 100%;

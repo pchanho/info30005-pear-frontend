@@ -2,12 +2,15 @@
 /* 	Chat page*/
 /*-------------*!*/
 
+/* general styling for chat-page */
 .chat-page {
   display: grid;
   grid-gap: 10px;
   padding: 50px;
+  padding-right: 80px;
 }
 
+/* styling for grids in page */
 .grid-item {
   background-color: #ffebcd;
   text-align: center;
@@ -15,6 +18,7 @@
   font-size: 18px;
 }
 
+/* styling and layout for user-display */
 .user-display{
   border-radius: 10px;
   background-repeat: no-repeat;
@@ -26,7 +30,9 @@
   text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
+/* styling and layout for message-display */
 .message-display{
+  text-align: left;
   grid-area: 1 / 2 / 3 / 4;
   text-align: left;
   max-height: 480px;
@@ -37,6 +43,7 @@
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* styling and layout for topic-display */
 .topic-display{
   grid-area: 2 / 1 / 4 / 2;
   border-radius: 10px;
@@ -49,11 +56,12 @@
   text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
+/* styling for message form */
 .message-form{
   border-style: solid;
   border-color: #905a2a;
   border-radius: 10px;
-  height: 120px;
+  height: 140px;
   grid-area: 3 / 2 / 4 / 4;
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
 }
@@ -69,20 +77,29 @@
 .chatBox input {
   width: 50%;
   height: 30px;
+  border: 1px solid #905a2a;
+  border-radius: 4px;
+}
+
+.chatBox input:focus {
+  outline: none;
+}
+
+.send {
+  padding-top: 10px;
 }
 
 .chatBox h1 {
   font-size: 20px;
+  padding-bottom: 5px;
 }
 
-#btn{
-  width: 150px;
-  height: 35px;
+/* styling for buttons */
+#chatReport-btn, #send-btn, #leave-btn {
   text-align: center;
   align-items: center;
   text-decoration: none;
   font-weight: bold;
-  font-size: 15px;
   border-radius: 10px;
   background-color: #d2b48c;
   color: #fff;
@@ -91,7 +108,32 @@
   border: none;
 }
 
-#btn:hover {
+#chatReport-btn {
+  float: right;
+  width: 50px;
+  height: 20px;
+  font-size: 10px;
+}
+
+#send-btn, #leave-btn {
+  width: 150px;
+  height: 35px;
+  font-size: 15px;
+}
+
+.leave {
+  padding-right: 80px;
+  padding-bottom: 40px;
+}
+
+#leave-btn {
+  margin-top: 85px;
+  float: right;
+  
+}
+
+
+#chatReport-btn:hover, #send-btn:hover, #leave-btn:hover {
   background-color: #789d4a;
   transform: scale(1.1);
   color: #fff;

@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  NavLink,
+} from "react-router-dom";
 import Landing from "./pages/Landing";
 import Account from "./pages/Account";
 import Support from "./pages/Support";
@@ -7,13 +12,20 @@ import Report from "./pages/Report";
 import Home from "./pages/Home";
 import Create from "./pages/Create";
 import Chat from "./pages/Chat";
+import Loading from "./pages/Loading";
+import ReportLanding from "./pages/ReportLanding";
+import Admin from "./pages/Admin";
+import ReportList from "./pages/ReportList";
 import Nav from "./components/Nav";
 import "./css/styles.css";
 import Footer from "./components/Footer";
+import LandingFooter from "./components/LandingFooter";
+import ChatNav from "./components/ChatNav";
+import ReturnToLandingNav from "./components/ReturnToLandingNav";
+import ReportNav from "./components/ReportNav";
 
 export default function App() {
   return (
-
     <Router>
       <div className="App">
         {/* the content */}
@@ -22,10 +34,11 @@ export default function App() {
         <Switch>
           <Route exact path="/">
             <Landing />
-            <Footer />
+            <LandingFooter />
           </Route>
 
           <Route path="/account">
+            <ReturnToLandingNav />
             <Account />
             <Footer />
           </Route>
@@ -37,7 +50,7 @@ export default function App() {
           </Route>
 
           <Route path="/chat">
-            <Nav />
+            <ChatNav />
             <Chat />
             <Footer />
           </Route>
@@ -53,11 +66,30 @@ export default function App() {
           </Route>
 
           <Route path="/report">
-            <Nav />
+            <ReportNav />
             <Report />
             <Footer />
           </Route>
 
+          <Route path="/loading">
+            <Nav />
+            <Loading />
+          </Route>
+
+          <Route path="/reportLanding">
+            <ReturnToLandingNav />
+            <ReportLanding />
+          </Route>
+
+          <Route path="/admin">
+            <ReturnToLandingNav />
+            <Admin />
+          </Route>
+
+          <Route path="/reportList">
+            <ReturnToLandingNav />
+            <ReportList />
+          </Route>
         </Switch>
       </div>
     </Router>

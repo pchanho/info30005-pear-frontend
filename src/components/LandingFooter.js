@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 // Footer explains Pear team member and copyright of website
 export default function Footer() {
@@ -9,6 +10,9 @@ export default function Footer() {
         Gemma Seeley, Chanho Park, Deevesh Shanmuganathan, Dimitri Sadikin,
         Glenn Phillips
       </p>
+      <NavLink to="/reportLanding" className="adminLink">
+        Admin Access
+      </NavLink>
     </footer>
   );
 }

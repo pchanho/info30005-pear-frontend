@@ -6,6 +6,7 @@
   display: grid;
   grid-gap: 10px;
   padding: 50px;
+  padding-right: 80px;
 }
 
 .grid-item {
@@ -76,14 +77,11 @@
   font-size: 20px;
 }
 
-#btn{
-  width: 150px;
-  height: 35px;
+#chatReport-btn, #send-btn, #leave-btn {
   text-align: center;
   align-items: center;
   text-decoration: none;
   font-weight: bold;
-  font-size: 15px;
   border-radius: 10px;
   background-color: #d2b48c;
   color: #fff;
@@ -92,7 +90,32 @@
   border: none;
 }
 
-#btn:hover {
+#chatReport-btn {
+  float: right;
+  width: 50px;
+  height: 20px;
+  font-size: 10px;
+}
+
+#send-btn, #leave-btn {
+  width: 150px;
+  height: 35px;
+  font-size: 15px;
+}
+
+.leave {
+  padding-right: 80px;
+  padding-bottom: 40px;
+}
+
+#leave-btn {
+  margin-top: 85px;
+  float: right;
+  
+}
+
+
+#chatReport-btn:hover, #send-btn:hover, #leave-btn:hover {
   background-color: #789d4a;
   transform: scale(1.1);
   color: #fff;

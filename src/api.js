@@ -217,9 +217,6 @@ export async function readOneAccount(data) {
     
     const accountId  = data.accountId;
     
-    
-    
-
     const endpoint = BASE_URL + '/account/readOne';
     
      var  res = await axios({
@@ -289,19 +286,21 @@ export function useOneAccount(data) {
 
 
 
-/* add account to the database 
+/* function adds an account to the database with the specified key value pairs 
+    inputted by the user 
 */ 
 export function addAccount(account) {
+    
     const { firstName, lastName, email, birthday, password, userImage } = account;
+    
+    //alerts the user if one of the input fields is blank
     if (!firstName || !lastName || !email || !birthday || !password) {
         alert("must include all fields");
         return null;
     }
 
-
+    //accesses the create function from backend
     const endpoint = BASE_URL + `/account/create/`;
-
-   
 
     const data = new FormData();
     data.append('firstName', firstName);
@@ -318,6 +317,7 @@ export function addAccount(account) {
         alert("account succesfully created!")
     }
     
+    //returns the status of the login (true, false)
     return fetch(endpoint, {
         method: "POST",
         body: data
@@ -326,10 +326,14 @@ export function addAccount(account) {
     
 }
 
-/* attempts to log into the account 
+/* function compares if login credentials match those stored in the 
+    database
 */
 export async function accountLogin(login) {
+    
     const { email, password } = login;
+    
+    //alerts the user if one of the input fields is blank
     if (!email || !password) {
         alert("must include all fields");
         return null;
@@ -340,11 +344,12 @@ export async function accountLogin(login) {
         password
     });
 
+    //accesses the login function from backend
     const endpoint = BASE_URL + `/account/login/`;
     console.log("login");
 
     //returns the status of the login (true, false)
-   return new Promise( function(resolve) {
+    return new Promise( function(resolve) {
         axios({
             method: 'post',
             url: endpoint,
@@ -510,7 +515,7 @@ function getReports() {
     return fetch(endpoint).then(res => res.json());
 }
 
-/* wrapper for get conversations 
+/* wrapper for get reports 
 */
 export function useReports() {
     const [loading, setLoading] = useState(true);

@@ -12,6 +12,8 @@ export default function Chat(data) {
   var { loading, conversations, error } = useReadOneConversation({ conversationId: sessionStorage.getItem('conversationId') })
   console.log(conversations)
 
+  let history = useHistory(); 
+
   if (loading) {
     return <p>Loading...</p>;
   }
@@ -19,10 +21,19 @@ export default function Chat(data) {
     return <p>Something went wrong: {error.message}</p>;
   }
 
+  function onSubmit2(event) {
+    event.preventDefault();
+    removeParticipantsInConversation({ conversationId: sessionStorage.getItem('conversationId'), participantsId: sessionStorage.getItem('accountId') })
+    history.push("/home");
+  }
+
   addParticipantsInConversation({ conversationId: sessionStorage.getItem('conversationId'), participantsId: sessionStorage.getItem('accountId')})
 
   return (
     <div>
+      <div className="leave">
+        <button type="submit" id='leave-btn' onClick={onSubmit2}>Leave</button>
+      </div>
       <div className="message-heading">
       </div>
       <div className="chat-page">
@@ -69,9 +80,7 @@ function MessageForm() {
       text,
     });
   }
-  function onSubmit2() {
-    removeParticipantsInConversation({ conversationId: sessionStorage.getItem('conversationId'), participantsId: sessionStorage.getItem('accountId') })
-  }
+  
   function handleSubmit(event) {
     event.preventDefault();
   }
@@ -91,9 +100,9 @@ function MessageForm() {
 
         /> <br />
 
-        <input type="submit" value="Send" id='btn' onClick={onSubmit} />
+        <input type="submit" value="Send" id='send-btn' onClick={onSubmit} />
 
-        <input type="submit" value="Leave" id='btn' onClick={onSubmit2} />
+
       </form>
     </div>
   );
@@ -125,7 +134,7 @@ function Message(message) {
           {account.firstName}:
                   <br></br>
           {text}
-          <input type="submit" value="Report" id='btn' onClick={onSubmit} />
+          <input type="submit" value="Report" id='chatReport-btn' onClick={onSubmit} />
         </div>
       </div>
     </section>

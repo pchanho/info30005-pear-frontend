@@ -14,7 +14,8 @@ import ReportList from "./pages/ReportList"
 import Nav from "./components/Nav";
 import "./css/styles.css";
 import Footer from "./components/Footer";
-import LandingFooter from "./components/LandingFooter"
+import LandingFooter from "./components/LandingFooter";
+import ChatNav from "./components/ChatNav";
 
 export default function App() {
   return (
@@ -42,7 +43,7 @@ export default function App() {
           </Route>
 
           <Route path="/chat">
-            <Nav />
+            <ChatNav />
             <Chat />
             <Footer />
           </Route>

@@ -1,6 +1,5 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import Button from "./Button";
 import "../css/styles.css";
 
 // Nav specifies where to nagigate for each menu

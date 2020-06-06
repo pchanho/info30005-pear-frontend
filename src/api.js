@@ -8,7 +8,9 @@ import axios from "axios";
 import { useHistory } from "react-router-dom";
 
 //Temporary base url before update heroku server
-const BASE_URL = "http://localhost:3001";
+// const BASE_URL = "http://localhost:3001";
+
+const BASE_URL = "https://info30005-pear.herokuapp.com";
 
 /*----------------
  Conversation API

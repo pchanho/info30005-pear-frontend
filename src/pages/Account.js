@@ -17,7 +17,7 @@ export default function Account() {
         <h2 id="nav-logo-text">Pear</h2>
       </div>
       <section className="forms">
-        <div class="account">
+        <div className="account">
           <AccountAddForm />
 
           <Login />

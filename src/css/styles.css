@@ -102,7 +102,7 @@ nav{
   display: flex;
 }
 
-nav a {
+nav a, nav button {
   font-size: 18px;
   text-decoration: none;
   color: inherit;
@@ -110,19 +110,19 @@ nav a {
   margin: 0 17px;
 }
 
-nav a:first-child {
+nav a:first-child, nav button:first-child {
   margin-left: 0;
 }
 
-nav a:last-child {
+nav a:last-child, nav button:last-child{
   margin-right: 0;
 }
 
-nav a:hover {
+nav a:hover, nav button:hover {
   color: #905a2a;
 }
 
-nav a:after {
+nav a:after, nav button:after {
   content: "";
   display: block;
   width: 0;
@@ -131,7 +131,7 @@ nav a:after {
   transition: width 0.4s;
 }
 
-nav a:hover:after {
+nav a:hover:after, nav button:hover:after {
   width: 100%;
   color: lightgray;
 }

@@ -477,6 +477,7 @@ export function addReport(report) {
         data: data,
         headers: {'Content-Type': 'multipart/form-data' }
     }).then(res => {
+        alert("report succesfully submitted!")
         console.log(res.data._id)
        
     }

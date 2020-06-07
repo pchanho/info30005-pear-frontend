@@ -1,7 +1,4 @@
-/*!*-------------*/
-/* 	Landing page*/
-/*-------------*!*/
-
+/*General styling for landing page*/
 .landing, .about-pear {
   margin: 0;
   box-sizing: border-box;
@@ -57,10 +54,7 @@
   line-height: 2;
 }
 
-/*!*-------------*/
-/* 	Button */
-/*-------------*!*/
-
+/*General styling for landing page button*/
 .btn {
   text-decoration: none;
   font-weight: bold;
@@ -81,10 +75,7 @@
 
 
 
-/*!*-------------*/
-/* Nav*/
-/*-------------*!*/
-
+/*General styling for navigation bar*/
 .Nav-bar {
   position: absolute;
   top: 0;
@@ -142,9 +133,7 @@ nav a:hover:after, nav button:hover:after {
   font-size: 35px;
 }
 
-/*!*-------------*/
-/* Footer*/
-/*-------------*!*/
+/*General styling for footer*/
 
 footer {
   display: flex;

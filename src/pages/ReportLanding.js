@@ -36,12 +36,6 @@ export default function ReportLanding() {
     //contains the form for admin login
     return (
     <div className="form">
-
-        <div className="Nav-bar">
-        <h2 id="nav-logo-text">Pear</h2>
-        </div>
-        <button type="submit" onClick={handleLogin} className='return-btn'>Return to Home Page</button>
-
         <div className="report">
             <h1 id = "title">
                 Admin Access

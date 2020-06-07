@@ -10,7 +10,7 @@
     
 }
 
-.return-btn {
+.return-btn, .adminLogin-btn {
     text-decoration: none;
     font-weight: bold;
     font-size: 20px;
@@ -40,10 +40,10 @@
 
 .report input {
     padding: 10px 10px;
-  margin: 5px 5px;
-  margin-bottom: 10px;
-  border: 1px solid #905a2a;
-  border-radius: 4px;
+    margin: 5px 5px;
+    margin-bottom: 10px;
+    border: 1px solid #905a2a;
+    border-radius: 4px;
 }
 
 .report input:focus {

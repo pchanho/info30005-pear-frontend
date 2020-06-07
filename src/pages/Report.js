@@ -13,17 +13,11 @@ import { addReport } from "../api.js";
 export default function Report(data) {
   return (
     <div className="report-page">
-      <div className="grid-item">
-        AccountId: {sessionStorage.getItem("reportUserId")}
-      </div>
-
-      <div className="grid-item reason-display">
+      
+      <div className="reason-display">
         <ReasonForm />
       </div>
 
-      <div className="grid-item">
-        MessageId: {sessionStorage.getItem("reportMessageId")}
-      </div>
     </div>
   );
 }

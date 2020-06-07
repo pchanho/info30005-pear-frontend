@@ -1,7 +1,3 @@
-/*TODO
- *  1. Login feature
- *  2. */
-
 import { useState, useEffect } from "react";
 import FormData from "form-data";
 import axios from "axios";

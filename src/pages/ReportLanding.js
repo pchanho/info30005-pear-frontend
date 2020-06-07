@@ -1,9 +1,12 @@
+/* Report landing page allows admin to check reported user list*/
 import React, { useState } from "react";
 import { reportLogin} from "../api";
 import "../css/reportLandingStyles.css";
 import Landing from "./Landing";
 import {NavLink, useHistory} from "react-router-dom";
 
+/* function provides admin login button and direct to report list page
+ */
 export default function ReportLanding() {
     const [password, setPassword] = useState("");
 

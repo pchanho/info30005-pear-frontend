@@ -63,7 +63,7 @@ Note: only available chats will be shown in the home page (each chat can hold a 
 ### Support
 The support functionality of our project is divided into 2 subsections, "support" and "report". 
 
-The support section refers to the page where user is first directed to as they create a new account (when they log in for the first time). The support page includes 2 videos that aims to aid users in managing through the website and to provide tips on conversation starters.
+The support page includes 2 videos that aims to aid users in managing through the website and to provide tips on conversation starters.
 The support page can also be accessed through the navigation bar in the homepage of our website. 
 
 The report section refers to the feature provided by our website to flag/report inappropriate messages in the conversation page. This is accessed through clicking on the button on the right to every individual messages. When button is clicked, user is redirected to a new page where user can then inputs the reason for reporting said user (offender). When submitted, accountId of the offender, messsageId of the inappropriate message, and the reason are all compiled to a single report and recorded in the database. As this happens, user is send back to chat.

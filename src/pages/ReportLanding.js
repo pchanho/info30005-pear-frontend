@@ -1,20 +1,27 @@
+/* Report landing page handles the admin login
+ * Reporting feature of Pear
+ */
+
 import React, { useState } from "react";
 import { reportLogin} from "../api";
 import "../css/reportLandingStyles.css";
-import Landing from "./Landing";
-import {NavLink, useHistory} from "react-router-dom";
+import {useHistory} from "react-router-dom";
 
 export default function ReportLanding() {
     const [password, setPassword] = useState("");
 
     let history = useHistory();
 
+    /* function calls the api function and handles admin login
+    */ 
     async function handleLogin(event) {
         event.preventDefault();
 
-        var res
+        var res;
+
+        //waits for the report login function to return a value 
         res = (await reportLogin({password}))
-        console.log(res)
+        console.log(res);
         console.log(process.env.ADMIN);
         if (res != null){
             //res is True if the password matches
@@ -22,12 +29,12 @@ export default function ReportLanding() {
                 history.push("/admin");
             }
             else{
-                alert("Invalid Login")
+                alert("Invalid Login");
             }
         }
     }
     
-
+    //contains the form for admin login
     return (
     <div className="form">
 

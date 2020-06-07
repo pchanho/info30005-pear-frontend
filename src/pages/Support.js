@@ -6,7 +6,7 @@ import "react-animated-slider/build/horizontal.css";
 import "../css/supportStyles.css";
 import { useSupports } from "../api.js";
 import { NavLink } from "react-router-dom";
-import ReactPlayer from "react-player" //A React component for a variety of URLs, including YouTube
+import ReactPlayer from "react-player"; //A React component for a variety of URLs, including YouTube
 
 /* function contains the overall structure of the support page with links to
     home page
@@ -38,17 +38,17 @@ export default function Support(){
             Get Started
         </NavLink>
     </div>
-)
+  );
 }
 
 /* function fetches support content title and body from MongoDB*/
 function Content(support) {
-    const {title, body, video} = support;
+  const { title, body, video } = support;
 
-    return (
-        <div>
-            <h1>{title}</h1>
-            <h3>{body}</h3>
-        </div>
-    );
+  return (
+    <div>
+      <h1>{title}</h1>
+      <h3>{body}</h3>
+    </div>
+  );
 }

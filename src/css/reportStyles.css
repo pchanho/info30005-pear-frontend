@@ -4,32 +4,23 @@
 
 /* general styling for report page */
 .report-page {
-  display: grid;
-  grid-gap: 10px;
-  padding: 50px;
   padding-top: 200px;
   padding-bottom: 200px;
   min-height: calc(100vh - 159px);
-}
-
-/* styling for grid layout of page */
-
-.grid-item {
-  background-color: #ffebcd;
-  text-align: center;
-  padding: 15px;
-  font-size: 18px;
+  padding-left: 15%;
+  margin: auto;
 }
 
 /* styling for reason form section, layout included */
 .reason-display{
-  grid-area: 1 / 2 / 3 / 5;
-  padding: 50px;
+  padding: 20px;
   max-height: 480px;
   border-style: solid;
   border-color: #905a2a;
   border-radius: 10px;
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 80%;
 }
   
 .reason-heading {

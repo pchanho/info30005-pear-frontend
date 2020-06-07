@@ -2,8 +2,7 @@
 import React, { useState } from "react";
 import { reportLogin} from "../api";
 import "../css/reportLandingStyles.css";
-import Landing from "./Landing";
-import {NavLink, useHistory} from "react-router-dom";
+import {useHistory} from "react-router-dom";
 
 /* function provides admin login button and direct to report list page
  */
@@ -12,12 +11,16 @@ export default function ReportLanding() {
 
     let history = useHistory();
 
+    /* function calls the api function and handles admin login
+    */
     async function handleLogin(event) {
         event.preventDefault();
 
-        var res
+        var res;
+
+        //waits for the report login function to return a value
         res = (await reportLogin({password}))
-        console.log(res)
+        console.log(res);
         console.log(process.env.ADMIN);
         if (res != null){
             //res is True if the password matches
@@ -25,12 +28,12 @@ export default function ReportLanding() {
                 history.push("/admin");
             }
             else{
-                alert("Invalid Login")
+                alert("Invalid Login");
             }
         }
     }
-    
 
+    //contains the form for admin login
     return (
     <div className="form">
 
@@ -38,15 +41,15 @@ export default function ReportLanding() {
         <h2 id="nav-logo-text">Pear</h2>
         </div>
         <button type="submit" onClick={handleLogin} className='return-btn'>Return to Home Page</button>
-        
+
         <div className="report">
             <h1 id = "title">
                 Admin Access
             </h1>
             <form onSubmit={handleLogin}>
                 <label>Password</label>
-                <input 
-                    type="password" 
+                <input
+                    type="password"
                     name="password"
                     value={password}
                     onChange={event => {

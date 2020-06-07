@@ -1,3 +1,5 @@
+/* Support page provides user guides after users create an account*/
+
 import React from "react";
 import Slider from "react-animated-slider"; //A React component for presentation slide page
 import "react-animated-slider/build/horizontal.css";
@@ -6,7 +8,9 @@ import { useSupports } from "../api.js";
 import { NavLink } from "react-router-dom";
 import ReactPlayer from "react-player" //A React component for a variety of URLs, including YouTube
 
-
+/* function contains the overall structure of the support page with links to
+    home page
+*/
 export default function Support(){
     const { loading, supports, error } = useSupports();
     if (loading) {
@@ -37,7 +41,7 @@ export default function Support(){
 )
 }
 
-// Fetches support content title and body from MongoDB
+/* function fetches support content title and body from MongoDB*/
 function Content(support) {
     const {title, body, video} = support;
 

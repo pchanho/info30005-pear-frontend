@@ -1,3 +1,4 @@
+/* Landing page introduces Pear service and guides users to account and conversation page*/
 import React from 'react';
 import "../css/styles.css";
 import logo from "../img/Pear_logo.png";

@@ -3,28 +3,27 @@
  */
 import React, { useState } from "react";
 import "../css/adminStyles.css";
-import {useHistory} from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 /* function contains the overall structure of the admin page 
    and button to redirect to admin feature 
 */
 export default function Admin() {
+  let history = useHistory();
 
-    let history = useHistory();
+  function listButton(event) {
+    event.preventDefault();
+    history.push("/reportList");
+  }
 
-    function listButton(event) {
-        event.preventDefault();
-        history.push("/reportList");
-    }
-
-    return (
+  return (
     <div className="main">
-        <div className="commands">
-            <h1 id = "title">
-                Admin Commands
-            </h1>
-            <button type="submit" onClick={listButton}className='report-btn'>Reports list</button>
-        </div>
+      <div className="commands">
+        <h1 id="title">Admin Commands</h1>
+        <button type="submit" onClick={listButton} className="report-btn">
+          Reports list
+        </button>
+      </div>
     </div>
-    );
+  );
 }
